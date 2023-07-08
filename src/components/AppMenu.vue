@@ -33,7 +33,7 @@ onMounted(() => {
 
 <template>
     <header>
-        <h1 class="logo"><span class="firstname">Nad</span><span class="lastname">Lambino</span></h1>
+        <h1 class="logo"><span class="firstname">R</span><span class="lastname">L</span></h1>
         <ul class="navigations">
             <li v-for="(menu, index) in menus" :key="index">
                 <NavLink class="nav-link" :label="menu.label" :link="menu.link"/>
@@ -50,12 +50,10 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 header {
-    @apply flex flex-col gap-2 justify-between px-5 py-3 relative;
-
-    @apply md:flex-row;
+    @apply flex gap-2 justify-between items-end px-5 py-3 fixed w-full top-0 z-10;
 
     .logo {
-        @apply font-extrabold tracking-wide;
+        @apply font-extrabold tracking-wide text-3xl;
 
         .firstname {
             @apply text-green-accent;
@@ -63,9 +61,9 @@ header {
     }
 
     .navigations {
-        @apply flex justify-between;
+        @apply flex justify-between gap-1;
 
-        @apply md:gap-2;
+        @apply lg:gap-8;
     }
 }
 </style>
