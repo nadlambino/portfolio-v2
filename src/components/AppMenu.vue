@@ -3,7 +3,6 @@ import { addIcons } from 'oh-vue-icons'
 import { MdDarkmodeOutlined, MdWbsunnyOutlined } from "oh-vue-icons/icons"
 import { useStorage } from '@vueuse/core'
 import { onMounted, watch } from 'vue';
-import NavLink from './NavLink.vue';
 
 addIcons(MdDarkmodeOutlined, MdWbsunnyOutlined)
 
@@ -19,13 +18,6 @@ function toggleMode() {
     document.body.classList.add(mode.value)
 }
 
-const menus = [
-  { label: 'Home', link: '/' },
-  { label: 'Skills', link: '/skills' },
-  { label: 'Projects', link: '/projects' },
-  { label: 'Contact', link: '/contact' }
-]
-
 onMounted(() => {
     toggleMode()
 })
@@ -35,9 +27,6 @@ onMounted(() => {
     <header>
         <h1 class="logo"><span class="firstname">R</span><span class="lastname">L</span></h1>
         <ul class="navigations">
-            <li v-for="(menu, index) in menus" :key="index">
-                <NavLink class="nav-link" :label="menu.label" :link="menu.link"/>
-            </li>
             <li>
                 <button @click="handleModeToggle">
                     <v-icon name="md-darkmode-outlined" v-if="mode === 'light'" />
@@ -50,7 +39,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 header {
-    @apply flex gap-2 justify-between items-end px-5 py-3 fixed w-full top-0 z-10;
+    @apply flex gap-2 justify-between items-center px-5 py-3 fixed w-full top-0 z-10;
 
     .logo {
         @apply font-extrabold tracking-wide text-3xl;
