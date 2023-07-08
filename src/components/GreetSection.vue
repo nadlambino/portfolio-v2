@@ -7,10 +7,6 @@
         <h3 class="greet-text">hello world</h3>
         <h1 class="intro-text">I am <span class="name">Ronald Lambino</span></h1>
         <h2 class="desc-text">a passionate web developer</h2>
-        <p class="all-started">
-            It all started way back in 2016 where I created my very first javascript application. 
-            And here I am now, providing the best quality products for the people I'm working for.
-        </p>
     </div>
 </template>
 
@@ -34,10 +30,6 @@
 
     .desc-text {
         @apply text-default text-3xl
-    }
-
-    .all-started {
-        @apply mt-5
     }
 }
 
