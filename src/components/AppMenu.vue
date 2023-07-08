@@ -7,7 +7,7 @@ import NavLink from './NavLink.vue';
 
 addIcons(MdDarkmodeOutlined, MdWbsunnyOutlined)
 
-const mode = useStorage('mode', 'light')
+const mode = useStorage('mode', 'dark')
 watch(mode, toggleMode)
 function handleModeToggle() {
     mode.value = mode.value === 'dark' ? 'light' : 'dark'
@@ -20,7 +20,7 @@ function toggleMode() {
 }
 
 const menus = [
-  { label: 'Home', link: '/home' },
+  { label: 'Home', link: '/' },
   { label: 'Skills', link: '/skills' },
   { label: 'Projects', link: '/projects' },
   { label: 'Contact', link: '/contact' }

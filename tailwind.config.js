@@ -11,7 +11,8 @@ export default {
         poppins: ['Poppins', 'sans-serif']
       },
       colors: {
-        'light': '#e9edf1',
+        'default': '#819bbf',
+        'light': '#c9d0df',
         'lighter': '#F1F6F9',
         'dark': '#394867',
         'darker': '#283449',
