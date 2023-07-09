@@ -9,10 +9,6 @@ import CareerHistory from './../components/CareerHistory.vue'
         <GreetSection />
         <div class="content">
             <AboutMe />
-            <AboutMe />
-            <AboutMe />
-            <AboutMe />
-            <AboutMe />
             <CareerHistory />
         </div>
     </section>

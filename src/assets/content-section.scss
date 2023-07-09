@@ -3,6 +3,15 @@
     overflow-x: scroll;
 
     @apply py-5 flex flex-col overflow-y-auto overflow-x-hidden scroll-smooth snap-mandatory snap-start;
+    
+    &::-webkit-scrollbar {
+        @apply bg-transparent w-[3px]
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        @apply bg-light rounded-md;
+        @apply dark:bg-dark;
+    }
 }
 
 .content-wrapper {
@@ -10,7 +19,7 @@
 }
 
 .title {
-    @apply text-green-accent font-semibold mb-2
+    @apply text-green-accent font-semibold mb-5 uppercase
 }
 
 p {
@@ -19,4 +28,8 @@ p {
 
 span {
     @apply font-semibold;
+}
+
+a {
+    @apply text-green-accent underline;
 }
