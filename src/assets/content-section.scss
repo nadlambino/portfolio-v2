@@ -16,6 +16,8 @@ section {
 
 .content {
     @apply max-w-screen-md m-auto h-full overflow-y-scroll flex flex-col justify-start;
+
+    @apply lg:justify-center;
 }
 
 .title {
