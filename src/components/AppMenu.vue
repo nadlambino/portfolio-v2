@@ -25,23 +25,29 @@ onMounted(() => {
 
 <template>
     <header>
-        <h1 class="logo"><span class="firstname">R</span><span class="lastname">L</span></h1>
-        <ul class="navigations">
-            <li>
-                <button @click="handleModeToggle">
-                    <v-icon name="md-darkmode-outlined" v-if="mode === 'light'" />
-                    <v-icon name="md-wbsunny-outlined" v-else/>
-                </button>
-            </li>
-        </ul>
+        <div class="container">
+            <h1 class="logo"><span class="firstname">R</span><span class="lastname">L</span></h1>
+            <ul class="navigations">
+                <li>
+                    <button @click="handleModeToggle">
+                        <v-icon name="md-darkmode-outlined" v-if="mode === 'light'" />
+                        <v-icon name="md-wbsunny-outlined" v-else/>
+                    </button>
+                </li>
+            </ul>
+        </div>
     </header>
 </template>
 
 <style lang="scss" scoped>
 header {
-    @apply flex gap-2 justify-between items-center px-5 py-3 fixed w-full top-0 z-20 bg-lighter;
+    @apply flex justify-center items-center fixed w-full top-0 z-20 bg-lighter;
 
     @apply dark:bg-darkest;
+    
+    .container {
+        @apply max-w-screen-md flex gap-2 justify-between items-center py-3 w-full;
+    }
 
     .logo {
         @apply font-extrabold tracking-wide text-3xl;

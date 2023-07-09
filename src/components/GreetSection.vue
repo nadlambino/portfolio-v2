@@ -30,7 +30,7 @@ const particlesLoaded = async container => {
 <style scoped lang="scss">
 .content-wrapper {
     .content {
-        @apply justify-center relative z-10
+        @apply justify-center relative z-10 text-center
     }
     .greet-text {
         @apply text-default text-2xl mb-2;
