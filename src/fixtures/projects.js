@@ -34,7 +34,7 @@ export default [
     {
         name: 'Appointment Booking App',
         description: 'An appointment booking application.',
-        stacks: ['html5', 'css3', 'vue', 'php', 'js', 'laravel', 'mysql'],
+        stacks: ['html5', 'css3', 'vue', 'js', 'php', 'laravel', 'mysql'],
         image: '',
         git_url: 'https://github.com/nadlambino/appointment-booking',
         live_url: ''
