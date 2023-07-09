@@ -3,7 +3,7 @@ section {
 }
 
 .content-wrapper {
-    @apply p-5 h-[90vh] w-full scroll-smooth sticky top-[10vh] bg-lighter;
+    @apply p-5 h-[90vh] w-full scroll-smooth sticky top-12 bg-lighter;
 
     @apply dark:bg-darkest;
 
@@ -16,8 +16,6 @@ section {
 
 .content {
     @apply max-w-screen-md m-auto h-full overflow-y-scroll flex flex-col justify-start;
-
-    @apply lg:justify-center;
 }
 
 .title {

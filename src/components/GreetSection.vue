@@ -1,9 +1,24 @@
 <script setup>
+import { loadFull } from "tsparticles";
+import absorber from './../particles/absorber'
 
+const particlesInit = async engine => {
+    await loadFull(engine);
+};
+
+const particlesLoaded = async container => {
+    console.log("Particles container loaded", container);
+};
 </script>
 
 <template>
     <div class="content-wrapper">
+        <Particles
+            id="tsparticles"
+            :particlesInit="particlesInit"
+            :particlesLoaded="particlesLoaded"
+            :options="absorber"
+        />
         <div class="content">
             <h3 class="greet-text">hello world</h3>
             <h1 class="intro-text">I am <span class="name">Ronald Lambino</span></h1>
@@ -15,7 +30,7 @@
 <style scoped lang="scss">
 .content-wrapper {
     .content {
-        @apply justify-center
+        @apply justify-center relative z-10
     }
     .greet-text {
         @apply text-default text-2xl mb-2;
