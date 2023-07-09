@@ -19,7 +19,7 @@ section {
 }
 
 .content {
-    @apply h-max max-w-screen-md overflow-y-scroll flex flex-col justify-center;
+    @apply max-w-screen-md w-full h-max overflow-y-scroll flex flex-col justify-center;
 }
 
 .title {
