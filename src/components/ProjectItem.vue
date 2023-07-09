@@ -17,8 +17,8 @@ const { project } = toRefs(props);
         <div class="header">
             <h1 class="name">{{ project.name }}</h1>
             <div class="links-container">
-                <a v-if="project.git_url" :href="project.git_url">Github</a>
-                <a v-if="project.live_url" :href="project.live_url">Live</a>
+                <a v-if="project.git_url" :href="project.git_url" target="_blank">Github</a>
+                <a v-if="project.live_url" :href="project.live_url" target="_blank">Live</a>
             </div>
         </div>
         <p class="description">
