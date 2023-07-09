@@ -12,7 +12,9 @@
 
 <style scoped lang="scss">
 .greet-container {
-    @apply flex flex-col justify-center;
+    @apply flex-col justify-center hidden;
+
+    @apply lg:flex;
 
     .greet-text {
         @apply text-default text-2xl mb-2;
