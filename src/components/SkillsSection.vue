@@ -20,12 +20,14 @@ addIcons(
 
 <template>
     <div class="content-wrapper">
-        <h1 class="title">Skills</h1>
-        <div class="skills-wrapper">
-            <SkillsWrapper label="Front-End" :skills="frontend"/>
-            <SkillsWrapper label="Back-End" :skills="backend"/>
-            <SkillsWrapper label="Databases" :skills="database"/>
-            <SkillsWrapper label="Tools" :skills="tools"/>
+        <div class="content">
+            <h1 class="title">Skills</h1>
+            <div class="skills-wrapper">
+                <SkillsWrapper label="Front-End" :skills="frontend"/>
+                <SkillsWrapper label="Back-End" :skills="backend"/>
+                <SkillsWrapper label="Databases" :skills="database"/>
+                <SkillsWrapper label="Tools" :skills="tools"/>
+            </div>
         </div>
     </div>
 </template>

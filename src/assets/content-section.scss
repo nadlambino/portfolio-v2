@@ -1,9 +1,21 @@
-.content {
-    @apply py-5 flex flex-col overflow-y-auto overflow-x-hidden scroll-smooth snap-start;
+section {
+    @apply flex flex-col justify-center items-center gap-[10vh]
 }
 
 .content-wrapper {
-    @apply min-h-screen flex flex-col justify-center
+    @apply p-5 min-h-[90vh] w-full flex flex-col scroll-smooth sticky top-[10vh] bg-lighter;
+
+    @apply dark:bg-darker;
+
+    &:nth-child(even) {
+        @apply bg-light;
+
+        @apply dark:bg-dark;
+    }
+}
+
+.content {
+    @apply max-w-screen-md m-auto;
 }
 
 .title {

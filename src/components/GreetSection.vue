@@ -3,17 +3,17 @@
 </script>
 
 <template>
-    <div class="greet-container">
-        <h3 class="greet-text">hello world</h3>
-        <h1 class="intro-text">I am <span class="name">Ronald Lambino</span></h1>
-        <h2 class="desc-text">a passionate web developer</h2>
+    <div class="content-wrapper">
+        <div class="content">
+            <h3 class="greet-text">hello world</h3>
+            <h1 class="intro-text">I am <span class="name">Ronald Lambino</span></h1>
+            <h2 class="desc-text">a passionate web developer</h2>
+        </div>
     </div>
 </template>
 
 <style scoped lang="scss">
-.greet-container {
-    @apply flex flex-col justify-center h-screen text-center;
-
+.content-wrapper {
     .greet-text {
         @apply text-default text-2xl mb-2;
     }
