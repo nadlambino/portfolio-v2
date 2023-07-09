@@ -5,6 +5,7 @@
 
 html {
     @apply font-roboto font-light;
+    @apply scroll-smooth snap-y snap-mandatory;
 }
 
 body, .light {

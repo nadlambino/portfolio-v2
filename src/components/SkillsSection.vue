@@ -24,7 +24,7 @@ addIcons(
         <div class="skills-wrapper">
             <SkillsWrapper label="Front-End" :skills="frontend"/>
             <SkillsWrapper label="Back-End" :skills="backend"/>
-            <SkillsWrapper label="Database" :skills="database"/>
+            <SkillsWrapper label="Databases" :skills="database"/>
             <SkillsWrapper label="Tools" :skills="tools"/>
         </div>
     </div>

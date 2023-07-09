@@ -1,9 +1,9 @@
 .content {
-    @apply py-5 flex flex-col overflow-y-auto overflow-x-hidden scroll-smooth;
+    @apply py-5 flex flex-col overflow-y-auto overflow-x-hidden scroll-smooth snap-start;
 }
 
 .content-wrapper {
-    @apply h-screen flex flex-col justify-center
+    @apply min-h-screen flex flex-col justify-center
 }
 
 .title {

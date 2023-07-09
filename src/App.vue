@@ -19,6 +19,6 @@ import SkillsSection from './components/SkillsSection.vue'
 
 <style scoped lang="scss">
 section {
-  @apply p-5 max-w-screen-lg m-auto
+  @apply p-5 max-w-screen-lg m-auto snap-y snap-mandatory
 }
 </style>

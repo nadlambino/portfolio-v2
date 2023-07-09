@@ -36,7 +36,7 @@ const { icon, iconClass, label, color } = toRefs(props)
     @apply flex flex-col items-center gap-2;
 }
 svg, img {
-    @apply w-[80px] h-[80px] object-contain
+    @apply w-[50px] h-[50px] object-contain
 }
 
 span {
