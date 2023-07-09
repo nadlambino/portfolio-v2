@@ -3,7 +3,7 @@ section {
 }
 
 .content-wrapper {
-    @apply p-5 min-h-[90vh] w-full flex flex-col scroll-smooth sticky top-[10vh] bg-lighter;
+    @apply p-5 h-[90vh] w-full scroll-smooth sticky top-[10vh] bg-lighter;
 
     @apply dark:bg-darkest;
 
@@ -15,7 +15,7 @@ section {
 }
 
 .content {
-    @apply max-w-screen-md m-auto;
+    @apply max-w-screen-md m-auto h-full overflow-y-scroll flex flex-col justify-start;
 }
 
 .title {

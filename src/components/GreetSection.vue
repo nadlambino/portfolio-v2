@@ -14,6 +14,9 @@
 
 <style scoped lang="scss">
 .content-wrapper {
+    .content {
+        @apply justify-center
+    }
     .greet-text {
         @apply text-default text-2xl mb-2;
     }
