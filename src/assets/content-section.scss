@@ -23,12 +23,12 @@ section {
 }
 
 .title {
-    @apply text-green-accent font-semibold mb-5 uppercase relative;
+    @apply text-green-accent font-semibold mb-5 uppercase relative text-xl;
 
     &:after {
         content: '';
         position: absolute;
-        @apply bg-green-accent w-12 h-[2px] top-[37%] bottom-0 ml-2;
+        @apply bg-green-accent w-10 h-[2px] top-[48%] bottom-0 ml-2;
     }
 }
 
