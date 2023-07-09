@@ -33,3 +33,9 @@ addIcons(PrArrowUpRight)
         </div>
     </div>
 </template>
+
+<style scoped>
+.content {
+    @apply lg:justify-center
+}
+</style>

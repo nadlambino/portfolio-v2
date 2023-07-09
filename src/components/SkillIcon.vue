@@ -33,10 +33,10 @@ const { icon, iconClass, label, color } = toRefs(props)
 
 <style scoped lang="scss">
 .icon-container {
-    @apply flex flex-col items-center gap-2;
+    @apply flex flex-col items-center gap-2 w-14 h-20;
 }
 svg, img {
-    @apply w-[50px] h-[50px] object-contain
+    @apply w-12 h-12 object-contain
 }
 
 span {

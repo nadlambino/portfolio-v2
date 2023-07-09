@@ -23,7 +23,7 @@ body, .light {
 }
     
 ::-webkit-scrollbar {
-    @apply bg-transparent w-0;
+    @apply bg-transparent w-0 h-0;
 }
 
 ::-webkit-scrollbar-thumb {

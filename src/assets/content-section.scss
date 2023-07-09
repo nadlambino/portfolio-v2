@@ -3,7 +3,7 @@ section {
 }
 
 .content-wrapper {
-    @apply p-5 h-[90vh] w-full scroll-smooth sticky top-12 bg-lighter;
+    @apply p-5 h-screen w-full scroll-smooth sticky top-12 bg-lighter;
 
     @apply dark:bg-darkest;
 
@@ -11,6 +11,10 @@ section {
         @apply bg-light;
 
         @apply dark:bg-darker;
+    }
+
+    &:last-child {
+        @apply pt-16;
     }
 }
 
