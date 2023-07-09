@@ -15,7 +15,7 @@ const props = defineProps({
 
 <template>
     <div>
-        <h3>{{ props.label }}</h3>
+        <h3 class="label">{{ props.label }}</h3>
         <div class="skills">
             <SkillIcon
                 v-for="(skill, index) in props.skills" 
@@ -30,8 +30,11 @@ const props = defineProps({
 </template>
 
 <style scoped lang="scss">
+.label {
+    @apply text-center mb-5;
+}
 .skills {
-    @apply flex justify-between flex-wrap gap-4;
+    @apply flex justify-center flex-wrap gap-4;
     
     svg {
         @apply w-[80px] h-[80px]

@@ -12,7 +12,7 @@ addIcons(PrArrowUpRight)
             <div>
 
             </div>
-            <h1 class="title">A bit about Me</h1>
+            <h1 class="title">About Me</h1>
             <p v-motion-slide-visible-once-right>
                 It all started way back in 2016 when I discovered how much fun and exciting programming is. 
                 From creating my very first JavaScript decision-making app, and here I am now, providing the best quality products for the people I'm working for.

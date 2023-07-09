@@ -23,10 +23,10 @@ addIcons(
         <div class="content">
             <h1 class="title">Skills</h1>
             <div class="skills-wrapper">
-                <SkillsWrapper label="Front-End" :skills="frontend" v-motion-slide-visible-once-right/>
-                <SkillsWrapper label="Back-End" :skills="backend" v-motion-slide-visible-once-left/>
-                <SkillsWrapper label="Databases" :skills="database" v-motion-slide-visible-once-right/>
-                <SkillsWrapper label="Tools" :skills="tools" v-motion-slide-visible-once-left/>
+                <SkillsWrapper label="Front-End" :skills="frontend" v-motion-slide-visible-once-bottom/>
+                <SkillsWrapper label="Back-End" :skills="backend" v-motion-slide-visible-once-bottom/>
+                <SkillsWrapper label="Databases" :skills="database" v-motion-slide-visible-once-bottom/>
+                <SkillsWrapper label="Tools" :skills="tools" v-motion-slide-visible-once-bottom/>
             </div>
         </div>
     </div>
