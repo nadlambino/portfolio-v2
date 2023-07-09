@@ -39,7 +39,9 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 header {
-    @apply flex gap-2 justify-between items-center px-5 py-3 fixed w-full top-0 z-10;
+    @apply flex gap-2 justify-between items-center px-5 py-3 fixed w-full top-0 z-10 bg-lighter;
+
+    @apply dark:bg-darker;
 
     .logo {
         @apply font-extrabold tracking-wide text-3xl;

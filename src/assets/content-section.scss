@@ -1,20 +1,9 @@
 .content {
     @apply py-5 flex flex-col overflow-y-auto overflow-x-hidden scroll-smooth;
-    
-    &::-webkit-scrollbar {
-        @apply bg-transparent w-0;
-
-        @apply lg:w-[3px]
-    }
-    
-    &::-webkit-scrollbar-thumb {
-        @apply bg-light rounded-md;
-        @apply dark:bg-dark;
-    }
 }
 
 .content-wrapper {
-    @apply h-full min-h-full flex flex-col justify-center
+    @apply h-screen flex flex-col justify-center
 }
 
 .title {

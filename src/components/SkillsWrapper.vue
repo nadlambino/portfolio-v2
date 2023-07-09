@@ -31,9 +31,7 @@ const props = defineProps({
 
 <style scoped lang="scss">
 .skills {
-    @apply flex justify-evenly flex-wrap gap-3;
-
-    @apply lg:justify-start;
+    @apply flex justify-start flex-wrap gap-5;
     
     svg {
         @apply w-[80px] h-[80px]

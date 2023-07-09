@@ -32,6 +32,8 @@ addIcons(
 
 <style scoped lang="scss">
 .skills-wrapper {
-    @apply flex flex-col gap-10;
+    @apply grid grid-flow-row grid-cols-1 gap-10;
+
+    @apply lg:grid-cols-4;
 }
 </style>

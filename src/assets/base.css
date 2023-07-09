@@ -20,3 +20,14 @@ body, .light {
     
     -webkit-tap-highlight-color: transparent;
 }
+    
+::-webkit-scrollbar {
+    @apply bg-transparent w-0;
+
+    @apply lg:w-[3px]
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-light rounded-md;
+    @apply dark:bg-dark;
+}
