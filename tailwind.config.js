@@ -15,7 +15,8 @@ export default {
         'light': '#eaeff5',
         'lighter': '#F1F6F9',
         'dark': '#394867',
-        'darker': '#283449',
+        'darker': '#303f55',
+        'darkest': '#283449',
         'green-accent': '#0c6'
       },
     },

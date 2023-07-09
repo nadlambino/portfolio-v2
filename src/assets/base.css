@@ -9,11 +9,11 @@ html {
 }
 
 body, .light {
-    @apply bg-lighter text-dark;
+    @apply bg-lighter text-darker;
 }
 
 .dark {
-    @apply bg-darker text-light;
+    @apply bg-darkest text-light;
 }
 
 * {

@@ -5,12 +5,12 @@ section {
 .content-wrapper {
     @apply p-5 min-h-[90vh] w-full flex flex-col scroll-smooth sticky top-[10vh] bg-lighter;
 
-    @apply dark:bg-darker;
+    @apply dark:bg-darkest;
 
     &:nth-child(even) {
         @apply bg-light;
 
-        @apply dark:bg-dark;
+        @apply dark:bg-darker;
     }
 }
 
