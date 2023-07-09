@@ -1,4 +1,8 @@
 <script setup>
+import { addIcons } from 'oh-vue-icons';
+import { PrArrowUpRight } from 'oh-vue-icons/icons';
+
+addIcons(PrArrowUpRight)
 
 </script>
 
@@ -20,7 +24,10 @@
         </p>
         <p>
             Aside from my passion with coding, I also do like writing poems. Take a visit at my 
-            <a href="https://poetizer.com/author/45921" target="_blank">Poetizer</a> profile.
+            <a href="https://poetizer.com/author/45921" target="_blank">
+                Poetizer
+                <v-icon name="pr-arrow-up-right" />
+            </a> profile.
         </p>
     </div>
 </template>

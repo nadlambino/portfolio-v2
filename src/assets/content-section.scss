@@ -30,5 +30,9 @@ span {
 }
 
 a {
-    @apply text-green-accent underline;
+    @apply text-green-accent;
+
+    svg {
+        @apply w-[15px] h-[15px]
+    }
 }
