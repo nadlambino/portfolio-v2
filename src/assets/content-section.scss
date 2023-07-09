@@ -1,9 +1,9 @@
 section {
-    @apply flex flex-col justify-center items-center gap-[10vh]
+    @apply flex flex-col justify-center items-center
 }
 
 .content-wrapper {
-    @apply p-5 h-screen w-full scroll-smooth sticky top-12 bg-lighter;
+    @apply flex justify-center items-center p-5 min-h-screen w-full scroll-smooth bg-lighter z-10;
 
     @apply dark:bg-darkest;
 
@@ -19,7 +19,7 @@ section {
 }
 
 .content {
-    @apply max-w-screen-md m-auto h-full overflow-y-scroll flex flex-col justify-start;
+    @apply h-max max-w-screen-md overflow-y-scroll flex flex-col justify-center;
 }
 
 .title {
