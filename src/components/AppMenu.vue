@@ -46,7 +46,9 @@ header {
     @apply dark:bg-darkest;
     
     .container {
-        @apply max-w-screen-md flex gap-2 justify-between items-center py-3 w-full;
+        @apply max-w-screen-md flex gap-2 justify-between items-center py-3 w-full px-5;
+
+        @apply lg:px-0;
     }
 
     .logo {
