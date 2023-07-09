@@ -14,3 +14,9 @@ body, .light {
 .dark {
     @apply bg-darker text-light;
 }
+
+* {
+    @apply outline-none;
+    
+    -webkit-tap-highlight-color: transparent;
+}
