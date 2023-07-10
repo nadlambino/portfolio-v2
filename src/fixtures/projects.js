@@ -1,3 +1,5 @@
+import dictionaryGif from './../assets/images/dictionary.gif'
+
 export default [
     {
         name: 'Online Tic Tac Toe',
@@ -27,7 +29,7 @@ export default [
         name: 'Dictionary',
         description: 'An online free dictionay app with phonetics and audio. It also has <b>Word of the Day</b> feature.',
         stacks: ['html5', 'css3', 'tailwind', 'js', 'vue'],
-        image: '',
+        image: dictionaryGif,
         git_url: 'https://github.com/nadlambino/nuxt-dictionary',
         live_url: 'https://dictionary-nadlambino.netlify.app'
     },
