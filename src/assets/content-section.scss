@@ -20,6 +20,8 @@ section {
 
 .content {
     @apply max-w-screen-md w-full h-max overflow-y-scroll flex flex-col justify-center;
+
+    @apply xl:max-w-screen-lg;
 }
 
 .title {

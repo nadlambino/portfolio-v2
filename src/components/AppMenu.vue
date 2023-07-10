@@ -49,6 +49,8 @@ header {
         @apply max-w-screen-md flex gap-2 justify-between items-center py-3 w-full px-5;
 
         @apply lg:px-0;
+        
+        @apply xl:max-w-screen-lg;
     }
 
     .logo {
