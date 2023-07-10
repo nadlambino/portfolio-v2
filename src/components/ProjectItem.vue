@@ -13,53 +13,85 @@ const { project } = toRefs(props);
 
 <template>
     <div class="project-container">
-        <div class="image"></div>
-        <div class="header">
-            <h1 class="name">{{ project.name }}</h1>
-            <div class="links-container">
-                <a v-if="project.git_url" :href="project.git_url" target="_blank">Github</a>
-                <a v-if="project.live_url" :href="project.live_url" target="_blank">Live</a>
+        <div class="image-container">
+            <img v-if="project.image" :src="project.image" class="image" :alt="project.name" />
+            <div v-else class="image">
+                <p>No Image Available</p>
             </div>
         </div>
-        <p class="description">
-            {{ project.description }}
-        </p>
-        <div class="stacks-container">
-            <span class="stack" v-for="(stack, index) in project.stacks" :key="index">
-                {{ stack }}
-            </span>
+        <div class="content">
+            <div class="header">
+                <h1 class="name">{{ project.name }}</h1>
+                <div class="links-container">
+                    <a v-if="project.git_url" :href="project.git_url" target="_blank">Github</a>
+                    <a v-if="project.live_url" :href="project.live_url" target="_blank">Live</a>
+                </div>
+            </div>
+            <p class="description" v-html="project.description"></p>
+            <div class="stacks-container">
+                <span class="stack" v-for="(stack, index) in project.stacks" :key="index">
+                    {{ stack }}
+                </span>
+            </div>
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
 .project-container {
-    @apply flex flex-col gap-2;
+    @apply flex flex-col gap-2 bg-lighter min-h-[250px];
 
-    .image {
-        @apply w-full h-[300px] bg-default/20;
+    @apply dark:bg-darkest;
 
-        @apply dark:bg-default/10;
-    }
-    .header {
-        @apply flex justify-between items-center;
+    @apply lg:flex-row lg:gap-0 lg:items-center;
 
-        .name {
-            @apply text-xl font-semibold mt-3;
+    &:nth-child(even) {
+        .image-container {
+            @apply lg:order-2;
         }
 
-        .links-container {
-            @apply flex gap-5;
+        .content {
+            @apply lg:order-1
         }
     }
-    .description {
-        @apply m-0;
-    }
-    .stacks-container {
-        @apply flex flex-wrap gap-2 text-sm;
 
-        .stack {
-            @apply border border-solid border-green-accent rounded px-2 text-green-accent font-normal
+    .image-container {
+        @apply w-full h-auto;
+
+        @apply lg:w-4/5;
+
+        .image {
+            @apply bg-default/20 w-full h-full object-cover aspect-video flex justify-center items-center;
+
+            @apply dark:bg-darker/50;
+        }
+    }
+
+    .content {
+        @apply flex flex-col gap-3 p-5;
+
+        .header {
+            @apply flex justify-between items-center;
+
+            .name {
+                @apply text-xl font-semibold;
+            }
+
+            .links-container {
+                @apply flex gap-5;
+            }
+        }
+
+        .description {
+            @apply m-0;
+        }
+
+        .stacks-container {
+            @apply flex flex-wrap gap-2 text-sm;
+
+            .stack {
+                @apply border border-solid border-green-accent rounded px-2 text-green-accent font-normal
+            }
         }
     }
 }

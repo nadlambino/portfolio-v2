@@ -9,7 +9,7 @@ export default [
     },
     {
         name: 'Snapify',
-        description: 'A simple social networking site that allow users to upload images or videos, react, and comment to a post.',
+        description: 'A simple social networking site that allow users to upload images or videos, react, and comment to a post. ',
         stacks: ['html5', 'css3', 'sass', 'tailwind', 'js', 'react', 'nodejs', 'express', 'mongoose'],
         image: '',
         git_url: 'https://github.com/nadlambino/test-mern',
@@ -19,13 +19,13 @@ export default [
         name: 'Image to ASCII',
         description: 'An image processing application that converts images into ASCII characters.',
         stacks: ['html5', 'css3', 'js', 'vue'],
-        iamge: '',
+        image: '',
         git_url: 'https://github.com/nadlambino/vue-image-to-ascii',
         live_url: 'https://imagetoascii-nadlambino.netlify.app'
     },
     {
         name: 'Dictionary',
-        description: 'A dictionay applicaction with phoenetics and audio.',
+        description: 'An online free dictionay app with phonetics and audio. It also has <b>Word of the Day</b> feature.',
         stacks: ['html5', 'css3', 'tailwind', 'js', 'vue'],
         image: '',
         git_url: 'https://github.com/nadlambino/nuxt-dictionary',

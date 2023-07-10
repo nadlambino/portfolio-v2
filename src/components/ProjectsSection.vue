@@ -17,6 +17,6 @@ import ProjectItem from './ProjectItem.vue';
 
 <style lang="scss">
 .projects-wrapper {
-    @apply flex flex-col gap-12;
+    @apply flex flex-col gap-10;
 }
 </style>
