@@ -28,7 +28,9 @@ const particlesInit = async engine => {
         @apply justify-center relative z-10 text-center
     }
     .greet-text {
-        @apply text-default text-2xl mb-2;
+        @apply text-default text-2xl mb-2 uppercase;
+
+        @apply lg:text-3xl lg:mb-5;
     }
 
     .intro-text {
@@ -36,13 +38,19 @@ const particlesInit = async engine => {
 
         @apply text-dark;
 
+        @apply lg:text-7xl lg:mb-3;
+
+        @apply xl:text-8xl;
+
         .name {
             @apply text-green-accent tracking-wide font-bold whitespace-nowrap;
         }
     }
 
     .desc-text {
-        @apply text-default text-3xl
+        @apply text-default text-3xl;
+
+        @apply lg:text-5xl;
     }
 }
 
