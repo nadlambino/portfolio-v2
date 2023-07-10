@@ -1,20 +1,16 @@
 <script setup>
 import AppMenu from './components/AppMenu.vue'
-import GreetSection from './components/GreetSection.vue'
-import AboutMe from './components/AboutMe.vue'
-import CareerHistory from './components/CareerHistory.vue'
-import SkillsSection from './components/SkillsSection.vue'
-import ProjectsSection from './components/ProjectsSection.vue'
+import env from './env'
+
+const sections = env.sections.filter(section => section.active != false)
 
 </script>
 
 <template>
   <AppMenu />
   <section>
-    <GreetSection />
-    <AboutMe />
-    <CareerHistory />
-    <SkillsSection />
-    <ProjectsSection />
+    <template v-for="(section, i) in sections" :key="i">
+      <component :is="section.component" />
+    </template>
   </section>
 </template>

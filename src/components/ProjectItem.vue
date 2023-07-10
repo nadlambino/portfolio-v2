@@ -37,9 +37,9 @@ const { project } = toRefs(props);
     @apply flex flex-col gap-2;
 
     .image {
-        @apply w-full h-[300px] bg-light;
+        @apply w-full h-[300px] bg-default/20;
 
-        @apply dark:bg-darker;
+        @apply dark:bg-default/10;
     }
     .header {
         @apply flex justify-between items-center;
