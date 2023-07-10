@@ -5,10 +5,6 @@ import absorber from './../particles/absorber'
 const particlesInit = async engine => {
     await loadFull(engine);
 };
-
-const particlesLoaded = async container => {
-    console.log("Particles container loaded", container);
-};
 </script>
 
 <template>
@@ -16,7 +12,6 @@ const particlesLoaded = async container => {
         <Particles
             id="tsparticles"
             :particlesInit="particlesInit"
-            :particlesLoaded="particlesLoaded"
             :options="absorber"
         />
         <div class="content">
