@@ -8,6 +8,14 @@ import {
 } from 'oh-vue-icons/icons';
 import { frontend, backend, database, tools } from './../fixtures/skills';
 import SkillsWrapper from './SkillsWrapper.vue';
+import useHeaderIntersect from './../hooks/header-intersects'
+import { onMounted, ref } from 'vue';
+
+const sectionElement = ref(null)
+
+onMounted(() => {
+    useHeaderIntersect('skills', sectionElement, { threshold: 0.8 })
+})
 
 addIcons(
     ViFileTypeHtml, ViFileTypeCss, ViFileTypeJsOfficial, ViFileTypeSass, ViFileTypeVue,
@@ -19,7 +27,7 @@ addIcons(
 </script>
 
 <template>
-    <div class="content-wrapper">
+    <div class="content-wrapper" ref="sectionElement">
         <div class="content">
             <h1 class="title">Skills</h1>
             <div class="skills-wrapper">

@@ -1,13 +1,20 @@
 <script setup>
 import { addIcons } from 'oh-vue-icons';
 import { PrArrowUpRight } from 'oh-vue-icons/icons';
+import useHeaderIntersect from './../hooks/header-intersects'
+import { onMounted, ref } from 'vue';
+
+const sectionElement = ref(null)
+
+onMounted(() => {
+    useHeaderIntersect('about', sectionElement, { threshold: 0.8 })
+})
 
 addIcons(PrArrowUpRight)
-
 </script>
 
 <template>
-    <div class="content-wrapper">
+    <div class="content-wrapper" ref="sectionElement">
         <div class="content">
             <div>
 

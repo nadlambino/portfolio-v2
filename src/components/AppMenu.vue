@@ -24,7 +24,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <header>
+    <header id="header">
         <div class="container">
             <h1 class="logo"><span class="firstname">R</span><span class="lastname">L</span></h1>
             <ul class="navigations">
@@ -41,7 +41,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 header {
-    @apply flex justify-center items-center fixed w-full top-0 z-20 bg-lighter;
+    @apply flex justify-center items-center fixed w-full top-0 z-20 bg-lighter transition-all ease-in-out;
 
     @apply dark:bg-darkest;
     

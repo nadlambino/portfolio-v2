@@ -1,11 +1,19 @@
 <script setup>
 import projects from './../fixtures/projects.js'
 import ProjectItem from './ProjectItem.vue';
+import useHeaderIntersect from './../hooks/header-intersects'
+import { onMounted, ref } from 'vue';
+
+const sectionElement = ref(null)
+
+onMounted(() => {
+    useHeaderIntersect('project', sectionElement, { threshold: 0.4 })
+})
 
 </script>
 
 <template>
-    <div class="content-wrapper">
+    <div class="content-wrapper" ref="sectionElement">
         <div class="content">
             <h1 class="title">Projects</h1>
             <div class="projects-wrapper">

@@ -1,6 +1,14 @@
 <script setup>
 import { loadFull } from "tsparticles";
 import absorber from './../particles/absorber'
+import useHeaderIntersect from './../hooks/header-intersects'
+import { onMounted, ref } from 'vue';
+
+const sectionElement = ref(null)
+
+onMounted(() => {
+    useHeaderIntersect('greet', sectionElement, { threshold: 0.2 })
+})
 
 const particlesInit = async engine => {
     await loadFull(engine);
@@ -8,7 +16,7 @@ const particlesInit = async engine => {
 </script>
 
 <template>
-    <div class="content-wrapper">
+    <div class="content-wrapper" ref="sectionElement">
         <Particles
             id="tsparticles"
             :particlesInit="particlesInit"
