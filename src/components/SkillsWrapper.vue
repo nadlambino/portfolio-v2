@@ -20,10 +20,7 @@ const props = defineProps({
             <SkillIcon
                 v-for="(skill, index) in props.skills" 
                 :key="index" 
-                :icon="skill.icon" 
-                :image="skill.image"
-                :label="skill.label" 
-                :color="skill.color"
+                :skill="skill"
             />
         </div>
     </div>
@@ -35,6 +32,8 @@ const props = defineProps({
 }
 .skills {
     @apply flex justify-center flex-wrap gap-4;
+
+    @apply lg:gap-6;
     
     svg {
         @apply w-[80px] h-[80px]
