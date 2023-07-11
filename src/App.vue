@@ -4,13 +4,26 @@ import env from './env'
 
 const sections = env.sections.filter(section => section.active != false)
 
+const getClass = (i) => {
+  const order = i + 1;
+  if (i === 0) {
+    return 'transparent'
+  }
+
+  return (order % 2) === 0 ? 'even' : 'odd'
+}
+
 </script>
 
 <template>
   <AppMenu />
   <section>
     <template v-for="(section, i) in sections" :key="i">
-      <component :is="section.component" :class="((i+1) % 2) === 0 ? 'even' : 'odd'" :data-order="((i+1) % 2) === 0 ? 'even' : 'odd'" />
+      <component 
+        :is="section.component" 
+        :class="getClass(i)" 
+        :data-order="getClass(i)" 
+      />
     </template>
   </section>
 </template>

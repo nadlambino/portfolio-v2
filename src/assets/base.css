@@ -41,3 +41,7 @@ body, .light {
 
     @apply dark:bg-darkest;
 }
+
+.transparent {
+    @apply bg-transparent;
+}
