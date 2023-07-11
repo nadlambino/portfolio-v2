@@ -10,7 +10,7 @@ export default function (key, target, options = {}) {
             isVisible.value = isIntersecting
         },
         {
-            rootMargin: '0px 0px 0px -300px',
+            rootMargin: '0px 0px 0px 0px',
             ...options,
         }
     );
@@ -19,8 +19,6 @@ export default function (key, target, options = {}) {
         const className = target.value.getAttribute('data-order');
         const headerElement = document.getElementById('header');
         if (isVisible.value === true) {
-            headerElement.classList.remove('even')
-            headerElement.classList.remove('odd')
             headerElement.classList.toggle(className)
         } else {
             headerElement.classList.remove(className)
