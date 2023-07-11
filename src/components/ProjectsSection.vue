@@ -7,7 +7,7 @@ import { onMounted, ref } from 'vue';
 const sectionElement = ref(null)
 
 onMounted(() => {
-    useHeaderIntersect('project', sectionElement, { rootMargin: '0px 0px 0px 0px'})
+    useHeaderIntersect('project', sectionElement, { rootMargin: '0px 0px 0px -200px'})
 })
 
 </script>

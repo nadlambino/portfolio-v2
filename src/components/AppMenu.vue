@@ -41,7 +41,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 header {
-    @apply flex justify-center items-center fixed w-full top-0 z-20 transition-all ease-in-out;
+    @apply flex justify-center items-center fixed w-full top-0 z-20;
     
     .container {
         @apply max-w-screen-md flex gap-2 justify-between items-center py-3 w-full px-5;
