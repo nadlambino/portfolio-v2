@@ -10,7 +10,7 @@ const sections = env.sections.filter(section => section.active != false)
   <AppMenu />
   <section>
     <template v-for="(section, i) in sections" :key="i">
-      <component :is="section.component" />
+      <component :is="section.component" :class="((i+1) % 2) === 0 ? 'even' : 'odd'" :data-order="((i+1) % 2) === 0 ? 'even' : 'odd'" />
     </template>
   </section>
 </template>

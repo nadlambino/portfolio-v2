@@ -7,7 +7,7 @@ import { onMounted, ref } from 'vue';
 const sectionElement = ref(null)
 
 onMounted(() => {
-    useHeaderIntersect('about', sectionElement, { threshold: 0.8 })
+    useHeaderIntersect('about', sectionElement)
 })
 
 addIcons(PrArrowUpRight)

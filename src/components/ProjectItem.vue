@@ -19,7 +19,7 @@ const { project } = toRefs(props);
                 <span>No Image Available</span>
             </div>
         </div>
-        <div class="content">
+        <div class="project-content">
             <div class="header">
                 <h1 class="name">{{ project.name }}</h1>
                 <div class="links-container">
@@ -50,7 +50,7 @@ const { project } = toRefs(props);
             @apply lg:order-2;
         }
 
-        .content {
+        .project-content {
             @apply lg:order-1
         }
     }
@@ -71,7 +71,7 @@ const { project } = toRefs(props);
         }
     }
 
-    .content {
+    .project-content {
         @apply flex flex-col gap-3 p-5;
 
         .header {

@@ -3,15 +3,7 @@ section {
 }
 
 .content-wrapper {
-    @apply flex justify-center items-center p-5 min-h-screen w-full scroll-smooth bg-lighter z-10;
-
-    @apply dark:bg-darkest;
-
-    &:nth-child(even) {
-        @apply bg-light;
-
-        @apply dark:bg-darker;
-    }
+    @apply flex justify-center items-center p-5 min-h-screen w-full scroll-smooth z-10;
 
     &:last-child {
         @apply pt-16;

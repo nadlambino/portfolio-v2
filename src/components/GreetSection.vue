@@ -7,7 +7,7 @@ import { onMounted, ref } from 'vue';
 const sectionElement = ref(null)
 
 onMounted(() => {
-    useHeaderIntersect('greet', sectionElement, { threshold: 0.2 })
+    useHeaderIntersect('greet', sectionElement)
 })
 
 const particlesInit = async engine => {

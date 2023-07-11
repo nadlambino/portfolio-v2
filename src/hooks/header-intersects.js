@@ -2,7 +2,6 @@ import { useIntersectionObserver } from "@vueuse/core";
 import { ref, watch } from "vue";
 
 export default function (key, target, options = {}) {
-    const headerElement = document.getElementById('header');
     const isVisible = ref(false)
     
     useIntersectionObserver(
@@ -11,14 +10,19 @@ export default function (key, target, options = {}) {
             isVisible.value = isIntersecting
         },
         {
-            ...options
+            rootMargin: '0px 0px 0px -300px',
+            ...options,
         }
     );
     
     watch(isVisible, () => {
+        console.log(key, isVisible.value)
+        const className = target.value.getAttribute('data-order');
+        const headerElement = document.getElementById('header');
         if (isVisible.value === true) {
-            const targetBgColor = getComputedStyle(target.value).backgroundColor
-            headerElement.style.backgroundColor = targetBgColor
+            headerElement.classList.remove('even')
+            headerElement.classList.remove('odd')
+            headerElement.classList.toggle(className)
         }
     })
 

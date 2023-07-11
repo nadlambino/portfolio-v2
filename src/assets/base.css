@@ -5,7 +5,6 @@
 
 html {
     @apply font-roboto font-light;
-    @apply scroll-smooth snap-y snap-mandatory;
 }
 
 body, .light {
@@ -29,4 +28,16 @@ body, .light {
 ::-webkit-scrollbar-thumb {
     @apply bg-light rounded-md;
     @apply dark:bg-dark;
+}
+
+.even {
+    @apply bg-light;
+
+    @apply dark:bg-darker;
+}
+
+.odd {
+    @apply bg-lighter;
+
+    @apply dark:bg-darkest;
 }

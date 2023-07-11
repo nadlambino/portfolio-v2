@@ -14,7 +14,7 @@ import { onMounted, ref } from 'vue';
 const sectionElement = ref(null)
 
 onMounted(() => {
-    useHeaderIntersect('skills', sectionElement, { threshold: 0.8 })
+    useHeaderIntersect('skills', sectionElement)
 })
 
 addIcons(
