@@ -27,7 +27,7 @@ export default [
     },
     {
         name: 'Dictionary',
-        description: 'An online free dictionay app with phonetics and audio. It also has <b>Word of the Day</b> feature.',
+        description: 'An online free dictionay app with phonetics and audio. It also has <span>Word of the Day</span> feature.',
         stacks: ['html5', 'css3', 'tailwind', 'js', 'vue'],
         image: dictionaryGif,
         git_url: 'https://github.com/nadlambino/nuxt-dictionary',
