@@ -22,8 +22,6 @@ export default function (key, target, options = {}) {
             headerElement.classList.remove('even')
             headerElement.classList.remove('odd')
             headerElement.classList.toggle(className)
-        } else {
-            headerElement.classList.remove(className)
         }
     })
 
