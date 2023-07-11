@@ -46,7 +46,7 @@ const experience = computed(() => {
 
 <style scoped lang="scss">
 .icon-container {
-    @apply flex flex-col items-center gap-0 w-14 h-20;
+    @apply flex flex-col items-center gap-0 w-16 h-auto;
 }
 svg, img {
     @apply w-12 h-12 object-contain mb-2

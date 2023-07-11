@@ -31,7 +31,7 @@ const props = defineProps({
     @apply text-center mb-5;
 }
 .skills {
-    @apply flex justify-center flex-wrap gap-4;
+    @apply flex justify-center flex-wrap gap-3;
 
     @apply lg:gap-6;
     
