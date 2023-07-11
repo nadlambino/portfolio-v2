@@ -23,7 +23,7 @@ export default {
               quantity: 4
           },
           repulse: {
-              distance: 100,
+              distance: 200,
               duration: 0.4
           }
       }
@@ -47,7 +47,7 @@ export default {
           enable: true,
           outMode: 'bounce',
           random: false,
-          speed: 1,
+          speed: 2,
           straight: false
       },
       number: {
@@ -55,7 +55,7 @@ export default {
               enable: true,
               area: 800
           },
-          value: 100
+          value: 140
       },
       opacity: {
           value: 0.5
