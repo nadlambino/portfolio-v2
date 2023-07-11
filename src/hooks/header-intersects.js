@@ -16,7 +16,6 @@ export default function (key, target, options = {}) {
     );
     
     watch(isVisible, () => {
-        console.log(key, isVisible.value)
         const className = target.value.getAttribute('data-order');
         const headerElement = document.getElementById('header');
         if (isVisible.value === true) {
