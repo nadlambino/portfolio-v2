@@ -31,15 +31,15 @@ body, .light {
 }
 
 .even {
-    @apply bg-light;
+    @apply !bg-light;
 
-    @apply dark:bg-darker;
+    @apply dark:!bg-darker;
 }
 
 .odd {
-    @apply bg-lighter;
+    @apply !bg-lighter;
 
-    @apply dark:bg-darkest;
+    @apply dark:!bg-darkest;
 }
 
 .transparent {
