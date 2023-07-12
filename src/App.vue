@@ -20,6 +20,7 @@ const getClass = (i) => {
   <section>
     <template v-for="(section, i) in sections" :key="i">
       <component 
+        :id="section.id"
         :is="section.component" 
         :class="getClass(i)" 
         :data-order="getClass(i)" 

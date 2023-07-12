@@ -8,23 +8,28 @@ export default {
     sections: [
         {
             component: GreetSection,
-            active: true
+            active: true,
+            id: 'home'
         },
         {
             component: AboutMe,
-            active: true
+            active: true,
+            id: 'about'
         },
         {
             component: CareerHistory,
-            active: false
+            active: false,
+            id: 'career'
         },
         {
             component: SkillsSection,
-            active: true
+            active: true,
+            id: 'skills'
         },
         {
             component: ProjectsSection,
-            active: true
+            active: true,
+            id: 'projects'
         },
     ]
 }

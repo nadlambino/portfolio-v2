@@ -5,7 +5,7 @@ section {
 .content-wrapper {
     min-height: 100svh;
     
-    @apply flex justify-center items-center p-5 w-full scroll-smooth z-10;
+    @apply flex justify-center items-center p-5 w-full scroll-smooth relative;
 
     &:last-child {
         @apply pt-16;
