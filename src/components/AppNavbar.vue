@@ -14,7 +14,7 @@
 
 <style scoped lang="scss">
 .navbar {
-    @apply py-4 top-0 z-30 transition-all ease-in-out;
+    @apply py-4 top-0 transition-all ease-in-out;
 
     ul {
         @apply flex gap-5 justify-center text-base;
@@ -41,7 +41,7 @@
 }
 
 .fixed-nav {
-    @apply flex top-0;
+    @apply flex top-0 z-30;
 }
 
 </style>
