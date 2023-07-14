@@ -26,7 +26,11 @@ onMounted(() => {
 <template>
     <header id="header">
         <div class="container">
-            <h1 class="logo"><span class="firstname">R</span><span class="lastname">L</span></h1>
+            <h1 class="logo">
+                <a href="/#home">
+                    <span class="firstname">R</span><span class="lastname">L</span>
+                </a>
+            </h1>
             <ul class="navigations">
                 <li>
                     <button @click="handleModeToggle">
@@ -56,6 +60,10 @@ header {
 
         .firstname {
             @apply text-green-accent;
+        }
+
+        .lastname {
+            @apply text-darkest dark:text-lighter;
         }
     }
 
