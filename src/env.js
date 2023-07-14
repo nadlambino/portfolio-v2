@@ -9,27 +9,32 @@ export default {
         {
             component: GreetSection,
             active: true,
-            id: 'home'
+            id: 'home',
+            name: 'Home'
         },
         {
             component: AboutMe,
             active: true,
-            id: 'about'
+            id: 'about',
+            name: 'About'
         },
         {
             component: CareerHistory,
             active: false,
-            id: 'career'
+            id: 'career',
+            name: 'Career'
         },
         {
             component: SkillsSection,
             active: true,
-            id: 'skills'
+            id: 'skills',
+            name: 'Skill'
         },
         {
             component: ProjectsSection,
             active: true,
-            id: 'projects'
+            id: 'projects',
+            name: 'Projects'
         },
     ]
 }

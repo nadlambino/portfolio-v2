@@ -1,13 +1,16 @@
 <script setup>
+import env from './../env'
+
+const sections = env.sections.filter(section => section.active === true);
+
 </script>
 
 <template>
     <nav class="navbar" ref="navElement">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li v-for="(section, i) in sections" :key="i">
+                <a :href="`#${section.id}`">{{ section.name }}</a>
+            </li>
         </ul>
     </nav>
 </template>
