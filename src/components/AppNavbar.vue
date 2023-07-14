@@ -20,13 +20,27 @@ const sections = env.sections.filter(section => section.active === true);
     @apply py-4 top-0 transition-all ease-in-out;
 
     ul {
-        @apply flex gap-5 justify-center text-base;
+        @apply flex gap-5 justify-center text-base font-semibold;
 
-        @apply lg:gap-10 lg:text-xl;
+        @apply lg:gap-10 lg:text-2xl;
 
         li {
+            @apply relative;
+
             &:first-child {
                 @apply text-green-accent
+            }
+
+            &::after {
+                @apply content-[''] absolute w-0 h-1 left-0 bottom-0 bg-green-accent transition-all ease-in-out;
+            }
+
+
+
+            &:hover {
+                &::after {
+                    @apply w-full;
+                }
             }
         }
     }
