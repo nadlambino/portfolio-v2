@@ -8,7 +8,9 @@ html {
 }
 
 body, .light {
-    @apply bg-lighter text-darker;
+    @apply bg-lighter text-darker text-lg;
+
+    @apply lg:text-xl;
 }
 
 .dark {
