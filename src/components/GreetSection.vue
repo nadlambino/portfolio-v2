@@ -1,35 +1,48 @@
 <script setup>
 import { loadFull } from "tsparticles";
-import absorber from './../particles'
+import particles from './../particles'
 import useHeaderIntersect from './../hooks/header-intersects'
-import { onMounted, ref } from 'vue';
+import { onMounted, reactive, ref, watch } from 'vue';
 import useObserver from './../hooks/intersects'
 import AppNavbar from './AppNavbar.vue'
 import { MdWavinghandOutlined } from 'oh-vue-icons/icons'
 import { addIcons } from "oh-vue-icons";
 import image from './../assets/images/webdev.svg'
+import { useStorage } from "@vueuse/core";
 
 addIcons(MdWavinghandOutlined)
 
 const sectionElement = ref(null)
 const navElement = ref(null)
 const { isVisible } = useObserver(navElement, true, '.body-navbar')
+const mode = useStorage('mode', 'dark')
+const parts = reactive(particles)
 
-onMounted(() => {
-    useHeaderIntersect('greet', sectionElement)
+watch(mode, () => {
+    const color = mode.value === 'dark' ? '#394867' : '#c4d3e7'
+    parts.particles.color.value = color;
+    parts.particles.links.color = color;
+}, {
+    immediate: true
 })
 
 const particlesInit = async engine => {
     await loadFull(engine);
 };
+
+onMounted(() => {
+    useHeaderIntersect('greet', sectionElement)
+})
+
 </script>
 
 <template>
     <div class="content-wrapper" ref="sectionElement">
         <Particles
+            :key="mode"
             id="tsparticles"
             :particlesInit="particlesInit"
-            :options="absorber"
+            :options="parts"
         />
         <div class="container">
             <div class="greet-content">
@@ -88,7 +101,7 @@ const particlesInit = async engine => {
 
                 @apply text-dark;
 
-                @apply lg:text-6xl;
+                @apply lg:text-6xl lg:whitespace-nowrap;
 
                 .name {
                     @apply text-green-accent tracking-wide font-bold whitespace-nowrap;
@@ -107,12 +120,12 @@ const particlesInit = async engine => {
         }
 
         .image-container {
-            @apply w-full absolute left-[-20px] top-0;
+            @apply w-full absolute left-[-20px] top-[-15%] z-0;
 
             @apply lg:w-1/2 lg:relative lg:z-10 translate-x-0 translate-y-0;
 
             img {
-                @apply w-full opacity-30;
+                @apply w-full opacity-30 relative z-0;
 
                 @apply lg:opacity-100;
             }

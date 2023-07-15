@@ -57,6 +57,10 @@ const sections = env.sections.filter(section => section.active === true);
     ul {
         @apply flex-wrap;
     }
+
+    .cv-list-item {
+        @apply relative z-10;
+    }
 }
 
 .top-navbar {

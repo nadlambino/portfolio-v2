@@ -30,10 +30,10 @@ export default {
   },
   particles: {
       color: {
-          value: '#394867'
+          value: '#c4d3e7'
       },
       links: {
-          color: '#394867',
+          color: '#c4d3e7',
           distance: 120,
           enable: true,
           opacity: 1,
