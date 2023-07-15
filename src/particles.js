@@ -47,7 +47,7 @@ export default {
           enable: true,
           outMode: 'bounce',
           random: false,
-          speed: 2,
+          speed: 0.2,
           straight: false
       },
       number: {
