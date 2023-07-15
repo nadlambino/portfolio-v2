@@ -44,10 +44,12 @@ const particlesInit = async engine => {
 
 <style scoped lang="scss">
 .content-wrapper {
-    @apply flex flex-col;
+    @apply flex flex-col max-w-screen-md;
+
+    @apply xl:max-w-screen-lg;
 
     .greet-content {
-        @apply justify-center relative z-10 text-center;
+        @apply relative z-10 w-full text-center;
     }
     .greet-text {
         @apply text-default text-lg mb-2;
