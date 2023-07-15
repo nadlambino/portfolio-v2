@@ -64,9 +64,7 @@ const particlesInit = async engine => {
 
         @apply text-dark;
 
-        @apply lg:text-7xl lg:mb-3;
-
-        @apply xl:text-8xl;
+        @apply lg:text-6xl lg:mb-3;
 
         .name {
             @apply text-green-accent tracking-wide font-bold whitespace-nowrap;
@@ -76,7 +74,7 @@ const particlesInit = async engine => {
     .desc-text {
         @apply text-default text-2xl;
 
-        @apply lg:text-5xl;
+        @apply lg:text-3xl;
     }
 }
 </style>

@@ -8,8 +8,11 @@ const sections = env.sections.filter(section => section.active === true);
 <template>
     <nav class="navbar" ref="navElement">
         <ul>
-            <li v-for="(section, i) in sections" :key="i">
+            <li v-for="(section, i) in sections" :key="i" class="link-list">
                 <a :href="`#${section.id}`">{{ section.name }}</a>
+            </li>
+            <li class="cv-list-item">
+                <a href="/CV062023.pdf" target="_blank" class="btn-link">Download CV</a>
             </li>
         </ul>
     </nav>
@@ -20,11 +23,11 @@ const sections = env.sections.filter(section => section.active === true);
     @apply py-4 top-0 transition-all ease-in-out;
 
     ul {
-        @apply flex gap-5 justify-center text-base font-semibold;
+        @apply flex gap-5 justify-center text-base font-normal;
 
-        @apply lg:gap-10 lg:text-2xl;
+        @apply lg:gap-10 lg:text-xl;
 
-        li {
+        li.link-list {
             @apply relative;
 
             &:first-child {
@@ -50,6 +53,10 @@ const sections = env.sections.filter(section => section.active === true);
     @apply mt-5;
 
     @apply lg:mt-10;
+
+    ul {
+        @apply flex-wrap;
+    }
 }
 
 .top-navbar {
@@ -59,6 +66,10 @@ const sections = env.sections.filter(section => section.active === true);
 
 .fixed-nav {
     @apply flex top-0 z-30;
+
+    .cv-list-item {
+        @apply hidden;
+    }
 }
 
 </style>

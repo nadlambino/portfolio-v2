@@ -45,3 +45,7 @@ body, .light {
 .transparent {
     @apply bg-transparent;
 }
+
+.btn-link {
+    @apply border-green-accent border-2 border-solid px-4 py-2 rounded-md
+}
