@@ -31,13 +31,13 @@ body, .light {
 }
 
 .even {
-    @apply !bg-light;
+    @apply !bg-light shadow-md;
 
     @apply dark:!bg-darker;
 }
 
 .odd {
-    @apply !bg-lighter;
+    @apply !bg-lighter shadow-md;
 
     @apply dark:!bg-darkest;
 }
@@ -47,5 +47,5 @@ body, .light {
 }
 
 .btn-link {
-    @apply border-green-accent border-2 border-solid px-4 py-2 rounded-md
+    @apply border-green-accent border-4 border-solid px-4 py-2 rounded-md;
 }

@@ -69,6 +69,8 @@ const sections = env.sections.filter(section => section.active === true);
 
     .cv-list-item {
         @apply hidden;
+
+        @apply lg:block;
     }
 }
 
