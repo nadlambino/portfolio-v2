@@ -28,7 +28,7 @@ export default {
             component: SkillsSection,
             active: true,
             id: 'skills',
-            name: 'Skill'
+            name: 'Skills'
         },
         {
             component: ProjectsSection,
