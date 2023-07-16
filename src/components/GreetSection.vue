@@ -120,9 +120,9 @@ onMounted(() => {
         }
 
         .image-container {
-            @apply w-full absolute left-[-20px] bottom-[15%] z-0;
+            @apply w-full absolute left-[-20px] top-[50%] translate-y-[-50%] z-0;
 
-            @apply lg:w-1/2 lg:relative lg:z-10 translate-x-0 translate-y-0;
+            @apply lg:w-1/2 lg:relative lg:z-10 lg:left-0 lg:top-0 lg:translate-y-0;
 
             img {
                 @apply w-full opacity-30 relative z-0;
