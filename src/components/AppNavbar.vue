@@ -12,7 +12,7 @@ const sections = env.sections.filter(section => section.active === true);
                 <a :href="`#${section.id}`">{{ section.name }}</a>
             </li>
             <li class="cv-list-item">
-                <a href="/CV062023.pdf" target="_blank" class="btn-link">Download CV</a>
+                <a href="/CV062023.pdf" target="_blank" class="btn-link">Open CV</a>
             </li>
         </ul>
     </nav>
