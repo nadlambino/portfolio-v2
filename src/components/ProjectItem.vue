@@ -39,9 +39,9 @@ const { project } = toRefs(props);
 
 <style scoped lang="scss">
 .project-container {
-    @apply flex flex-col gap-2 bg-lighter min-h-[250px];
+    @apply flex flex-col gap-2 bg-light min-h-[250px];
 
-    @apply dark:bg-darkest;
+    @apply dark:bg-darker;
 
     @apply lg:flex-row lg:gap-0 lg:items-center;
 
@@ -61,9 +61,9 @@ const { project } = toRefs(props);
         @apply lg:w-4/5;
 
         .image {
-            @apply bg-default/20 w-full h-full aspect-video flex justify-center items-center;
+            @apply bg-default/10 w-full h-full aspect-video flex justify-center items-center;
 
-            @apply dark:bg-darker/50;
+            @apply dark:bg-darkest/50;
 
             span {
                 @apply font-thin;
