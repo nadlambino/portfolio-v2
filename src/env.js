@@ -14,7 +14,7 @@ export default {
         },
         {
             component: AboutMe,
-            active: true,
+            active: false,
             id: 'about',
             name: 'About'
         },
