@@ -1,11 +1,12 @@
 import dictionaryGif from './../assets/images/dictionary.gif'
+import tictactoeGif from './../assets/images/tictactoe.gif'
 
 export default [
     {
         name: 'Online Tic Tac Toe',
         description: 'A Tic Tac Toe game where two players can play against each other over the internet.',
         stacks: ['html5', 'css3', 'sass', 'tailwind', 'js', 'react', 'socket.io'],
-        image: '',
+        image: tictactoeGif,
         git_url: 'https://github.com/nadlambino/tictactoe-react',
         live_url: 'https://tictactoe-nadlambino.netlify.app'
     },

@@ -5,9 +5,9 @@ section {
 .content-wrapper {
     min-height: 100svh;
     scroll-margin-top: 60px;
-    scroll-margin-bottom: 10px;
+    scroll-margin-bottom: 20px;
     
-    @apply flex justify-center items-center p-5 w-full scroll-smooth relative snap-start snap-always;
+    @apply flex justify-center items-center p-5 w-full scroll-smooth relative snap-start;
 
     &:last-child {
         @apply pt-16;

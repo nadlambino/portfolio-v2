@@ -15,7 +15,7 @@ const { project } = toRefs(props);
     <div class="project-container">
         <div class="image-container">
             <img v-if="project.image" :src="project.image" class="image" :alt="project.name" />
-            <div v-else class="image">
+            <div v-else class="no-image">
                 <span>No Image Available</span>
             </div>
         </div>
@@ -59,7 +59,17 @@ const { project } = toRefs(props);
         @apply w-full h-auto;
 
         .image {
-            @apply bg-default/10 w-full h-full aspect-video flex justify-center items-center;
+            @apply bg-default/10 w-full object-contain flex justify-center items-center;
+
+            @apply dark:bg-darkest/50;
+
+            span {
+                @apply font-thin;
+            }
+        }
+
+        .no-image {
+            @apply bg-default/10 aspect-video flex justify-center items-center;
 
             @apply dark:bg-darkest/50;
 
