@@ -11,11 +11,11 @@ export default [
     },
     {
         name: 'Snapify',
-        description: 'A simple social networking site that allow users to upload images or videos, react, and comment to a post. ',
-        stacks: ['html5', 'css3', 'sass', 'tailwind', 'js', 'react', 'nodejs', 'express', 'mongoose'],
+        description: 'A simple social networking site that allow users to upload images or videos, react, and comment to a post.',
+        stacks: ['html5', 'css3', 'tailwind', 'js', 'typescript', 'react', 'nodejs', 'express', 'mongoose', 'jwt'],
         image: '',
-        git_url: 'https://github.com/nadlambino/test-mern',
-        live_url: 'https://xmood.netlify.app'
+        git_url: 'https://github.com/nadlambino/snapify',
+        live_url: 'https://snapify-nadlambino.netlify.app'
     },
     {
         name: 'Image to ASCII',
