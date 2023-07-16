@@ -58,8 +58,6 @@ const { project } = toRefs(props);
     .image-container {
         @apply w-full h-auto;
 
-        @apply lg:w-4/5;
-
         .image {
             @apply bg-default/10 w-full h-full aspect-video flex justify-center items-center;
 

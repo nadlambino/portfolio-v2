@@ -5,6 +5,7 @@ section {
 .content-wrapper {
     min-height: 100svh;
     scroll-margin-top: 60px;
+    scroll-margin-bottom: 10px;
     
     @apply flex justify-center items-center p-5 w-full scroll-smooth relative snap-start snap-always;
 
