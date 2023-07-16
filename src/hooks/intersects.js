@@ -1,13 +1,13 @@
 import { ref, watch } from "vue";
 
-export default function(element, initialState = false, selector = '') {
+export default function(element, initialState = false, selector = '', options = {}) {
     const isVisible = ref(initialState)
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             isVisible.value = entry.isIntersecting
         });
-    });
+    }, options);
 
     const observe = (element) => {
         if (element instanceof Element) {

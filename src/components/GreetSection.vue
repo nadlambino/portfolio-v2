@@ -14,7 +14,7 @@ addIcons(MdWavinghandOutlined)
 
 const sectionElement = ref(null)
 const navElement = ref(null)
-const { isVisible } = useObserver(navElement, true, '.body-navbar')
+const { isVisible } = useObserver(navElement, true, '.body-navbar', {rootMargin: '-60px 0px 0px 0px'})
 const mode = useStorage('mode', 'dark')
 const parts = reactive(particles)
 
