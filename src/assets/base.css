@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 html {
-    @apply font-roboto font-light scroll-smooth;
+    @apply font-roboto font-light scroll-smooth snap-y snap-mandatory;
 }
 
 body, .light {
