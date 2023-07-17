@@ -49,10 +49,14 @@ body, .light {
 }
 
 .btn-link {
-    @apply border-green-accent border-4 border-solid px-3 py-1 relative;
+    @apply border-light-accent border-4 border-solid px-3 py-1 relative;
+
+    @apply dark:border-dark-accent;
 
     &::after {
-        @apply content-[''] absolute bg-green-accent top-0 left-0 scale-0 transition-all ease-in-out -z-10;
+        @apply content-[''] absolute bg-light-accent top-0 left-0 scale-0 transition-all ease-in-out -z-10;
+
+        @apply dark:bg-dark-accent;
     }
 
     &:hover {

@@ -90,7 +90,9 @@ onMounted(() => {
                 @apply lg:text-3xl;
 
                 .wave {
-                    @apply w-6 h-6 text-green-accent;
+                    @apply w-6 h-6 text-light-accent;
+
+                    @apply dark:text-dark-accent;
 
                     @apply lg:w-8 lg:h-8;
                 }
@@ -104,7 +106,9 @@ onMounted(() => {
                 @apply lg:text-6xl lg:whitespace-nowrap;
 
                 .name {
-                    @apply text-green-accent tracking-wide font-bold whitespace-nowrap;
+                    @apply text-light-accent tracking-wide font-bold whitespace-nowrap;
+
+                    @apply dark:text-dark-accent;
                 }
             }
 

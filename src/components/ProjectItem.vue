@@ -102,7 +102,9 @@ const { project } = toRefs(props);
             @apply flex flex-wrap gap-2 text-sm;
 
             .stack {
-                @apply border border-solid border-green-accent rounded px-2 text-green-accent font-normal
+                @apply border border-solid border-light-accent rounded px-2 text-light-accent font-normal;
+
+                @apply dark:border-dark-accent dark:text-dark-accent;
             }
         }
     }

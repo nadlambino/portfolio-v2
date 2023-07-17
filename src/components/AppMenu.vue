@@ -59,7 +59,9 @@ header {
         @apply font-extrabold tracking-wide text-3xl;
 
         .firstname {
-            @apply text-green-accent;
+            @apply text-light-accent;
+
+            @apply dark:text-dark-accent;
         }
 
         .lastname {

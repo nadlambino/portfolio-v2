@@ -31,11 +31,15 @@ const sections = env.sections.filter(section => section.active === true);
             @apply relative;
 
             &:first-child {
-                @apply text-green-accent
+                @apply text-light-accent;
+
+                @apply dark:text-dark-accent;
             }
 
             &::after {
-                @apply content-[''] absolute w-0 h-1 left-0 bottom-0 bg-green-accent transition-all ease-in-out;
+                @apply content-[''] absolute w-0 h-1 left-0 bottom-0 bg-light-accent transition-all ease-in-out;
+
+                @apply dark:bg-dark-accent;
             }
 
 

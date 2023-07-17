@@ -21,12 +21,16 @@ section {
 }
 
 .title {
-    @apply text-green-accent font-semibold mb-5 uppercase relative text-xl;
+    @apply text-light-accent font-semibold mb-5 uppercase relative text-xl;
+
+    @apply dark:text-dark-accent;
 
     &:after {
         content: '';
         position: absolute;
-        @apply bg-green-accent w-10 h-[2px] top-[48%] bottom-0 ml-2;
+        @apply bg-light-accent w-10 h-[2px] top-[48%] bottom-0 ml-2;
+
+        @apply dark:bg-dark-accent;
     }
 }
 
@@ -39,7 +43,9 @@ span {
 }
 
 a {
-    @apply text-green-accent;
+    @apply text-light-accent;
+
+    @apply dark:text-dark-accent;
 
     svg {
         @apply w-[15px] h-[15px]
