@@ -85,6 +85,8 @@ const { project } = toRefs(props);
     .project-content {
         @apply flex flex-col gap-3 p-5;
 
+        @apply lg:w-3/4;
+
         .header {
             @apply flex justify-between items-center;
 
