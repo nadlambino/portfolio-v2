@@ -28,6 +28,9 @@ const { project } = toRefs(props);
                 </div>
             </div>
             <p class="description" v-html="project.description"></p>
+            <ul v-if="project.features">
+                <li v-for="(feature, i) in project.features" :key="i">{{ feature }}</li>
+            </ul>
             <div class="stacks-container">
                 <span class="stack" v-for="(stack, index) in project.stacks" :key="index">
                     {{ stack }}
@@ -96,6 +99,10 @@ const { project } = toRefs(props);
 
         .description {
             @apply m-0;
+        }
+
+        ul {
+            @apply list-disc pl-5 italic
         }
 
         .stacks-container {
