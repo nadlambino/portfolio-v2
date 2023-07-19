@@ -17,7 +17,7 @@ export default [
             'Word of the day',
             'Spelling Game'
         ],
-        stacks: ['html5', 'css3', 'tailwind', 'js', 'vue'],
+        stacks: ['html5', 'css3', 'tailwind', 'js', 'vue', 'nuxt'],
         image: dictionaryGif,
         git_url: 'https://github.com/nadlambino/nuxt-dictionary',
         live_url: 'https://dictionary-nadlambino.netlify.app'
