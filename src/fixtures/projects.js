@@ -11,6 +11,18 @@ export default [
         live_url: 'https://tictactoe-nadlambino.netlify.app'
     },
     {
+        name: 'Dictionary App',
+        description: 'An dictionary app with phonetics and audio.',
+        features: [
+            'Word of the day',
+            'Spelling Game'
+        ],
+        stacks: ['html5', 'css3', 'tailwind', 'js', 'vue'],
+        image: dictionaryGif,
+        git_url: 'https://github.com/nadlambino/nuxt-dictionary',
+        live_url: 'https://dictionary-nadlambino.netlify.app'
+    },
+    {
         name: 'Snapify',
         description: 'A simple social media app that allows user to upload images or videos, react, and comment to a post.',
         features: [
@@ -35,18 +47,6 @@ export default [
         image: '',
         git_url: 'https://github.com/nadlambino/vue-image-to-ascii',
         live_url: 'https://imagetoascii-nadlambino.netlify.app'
-    },
-    {
-        name: 'Dictionary App',
-        description: 'An dictionary app with phonetics and audio.',
-        features: [
-            'Word of the day',
-            'Spelling Game'
-        ],
-        stacks: ['html5', 'css3', 'tailwind', 'js', 'vue'],
-        image: dictionaryGif,
-        git_url: 'https://github.com/nadlambino/nuxt-dictionary',
-        live_url: 'https://dictionary-nadlambino.netlify.app'
     },
     {
         name: 'Appointment Booking App',
