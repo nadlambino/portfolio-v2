@@ -1,5 +1,5 @@
-import dictionaryGif from './../assets/images/dictionary.gif'
-import tictactoeGif from './../assets/images/tictactoe.gif'
+import dictionaryGif from './../assets/images/pika-dictionary.png'
+import tictactoeGif from './../assets/images/pika-tictactoe.png'
 
 export default [
     {
