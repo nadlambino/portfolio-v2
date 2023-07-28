@@ -1,0 +1,59 @@
+.carousel-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.custom-arrow {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.custom-arrow button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  border-width: 0;
+  border-radius: 8px;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.custom-arrow button svg {
+  @apply text-dark-accent w-5 h-5;
+}
+
+.custom-arrow button:active {
+  transform: scale(0.95);
+  transform-origin: center;
+}
+
+.custom-dots {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.custom-dots li {
+  @apply bg-dark-accent/50;
+  display: inline-block;
+  width: 12px;
+  height: 4px;
+  margin: 0 3px;
+  border-radius: 4px;
+  transition: width 0.3s, background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.custom-dots li.is-active {
+  width: 40px;
+  @apply bg-dark-accent;
+}
