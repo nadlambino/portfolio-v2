@@ -21,7 +21,12 @@ onMounted(async () => {
     <div class="content">
       <h1 class="title">Articles</h1>
       <div class="articles-wrapper">
-        <ArticleItem v-for="article in articles" :key="article.id" :article="article" />
+        <ArticleItem
+          v-for="article in articles"
+          :key="article.id"
+          :article="article"
+          v-motion-slide-visible-once-right
+        />
       </div>
     </div>
   </div>
@@ -29,6 +34,6 @@ onMounted(async () => {
 
 <style lang="scss" scoped>
 .articles-wrapper {
-  @apply flex flex-col gap-10;
+  @apply flex flex-col gap-5;
 }
 </style>
