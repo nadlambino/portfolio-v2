@@ -51,7 +51,7 @@ const { article } = toRefs(props)
   }
 
   .details-container {
-    @apply p-5 flex flex-col gap-3 w-full;
+    @apply p-5 pt-0 flex flex-col gap-3 w-full;
 
     @apply lg:py-0;
   }
