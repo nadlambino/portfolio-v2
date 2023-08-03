@@ -52,7 +52,7 @@ const { project } = toRefs(props)
         </div>
       </div>
       <p class="description" v-html="project.description"></p>
-      <ul v-if="project.features">
+      <ul v-show="true" v-if="project.features">
         <li v-for="(feature, i) in project.features" :key="i">{{ feature }}</li>
       </ul>
       <div class="stacks-container">
@@ -68,27 +68,15 @@ const { project } = toRefs(props)
 @import './../assets/carousel.css';
 
 .project-container {
-  @apply flex flex-col gap-2 bg-light min-h-[250px];
+  @apply flex flex-col gap-2 bg-light min-h-[250px] shadow-md;
 
   @apply dark:bg-darker;
-
-  @apply lg:flex-row lg:gap-0 lg:items-center;
-
-  &:nth-child(even) {
-    .image-container {
-      @apply lg:order-2;
-    }
-
-    .project-content {
-      @apply lg:order-1;
-    }
-  }
 
   .image-container {
     @apply w-full h-auto;
 
     .image {
-      @apply bg-default/10 w-full object-contain flex justify-center items-center;
+      @apply bg-default/10 w-full rounded-none object-contain flex justify-center items-center;
 
       @apply dark:bg-darkest/50;
 
@@ -111,8 +99,6 @@ const { project } = toRefs(props)
   .project-content {
     @apply flex flex-col gap-3 p-5;
 
-    @apply lg:w-3/4;
-
     .header {
       @apply flex justify-between items-center;
 
@@ -130,7 +116,7 @@ const { project } = toRefs(props)
     }
 
     ul {
-      @apply list-disc pl-5 italic;
+      @apply list-disc pl-5 italic text-base;
     }
 
     .stacks-container {

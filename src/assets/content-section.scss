@@ -3,19 +3,14 @@ section {
 }
 
 .content-wrapper {
-  min-height: 100svh;
   scroll-margin-top: 60px;
   scroll-margin-bottom: 20px;
 
   @apply flex justify-center items-center p-5 w-full scroll-smooth relative;
-
-  &:last-child {
-    @apply pt-16;
-  }
 }
 
 .content {
-  @apply max-w-screen-md w-full min-h-screen h-max overflow-hidden flex flex-col;
+  @apply max-w-screen-md w-full overflow-hidden flex flex-col;
 
   @apply xl:max-w-screen-lg;
 }

@@ -19,23 +19,6 @@ import ascii3 from './../assets/images/ascii/ascii3.png'
 
 export default [
   {
-    name: 'Tic Tac Toe',
-    description: 'An online Tic Tac Toe game where two players can play against each other.',
-    stacks: ['html5', 'css3', 'sass', 'tailwind', 'js', 'react', 'socket.io'],
-    images: [tictactoe1, tictactoe2, tictactoe3, tictactoe4, tictactoe5],
-    git_url: 'https://github.com/nadlambino/tictactoe-react',
-    live_url: 'https://tictactoe-nadlambino.netlify.app'
-  },
-  {
-    name: 'Dictionary App',
-    description: 'An dictionary app with phonetics and audio.',
-    features: ['Word of the day', 'Spelling Game'],
-    stacks: ['html5', 'css3', 'tailwind', 'js', 'vue', 'nuxt'],
-    images: [dictionary1, dictionary2, dictionary3, dictionary4],
-    git_url: 'https://github.com/nadlambino/nuxt-dictionary',
-    live_url: 'https://dictionary-nadlambino.netlify.app'
-  },
-  {
     name: 'Snapify',
     description:
       'A simple social media app that allows user to upload images or videos, like, and comment to a post.',
@@ -64,6 +47,23 @@ export default [
     live_url: 'https://snapify-nadlambino.netlify.app'
   },
   {
+    name: 'Dictionary App',
+    description: 'An dictionary app with phonetics and audio.',
+    features: ['Word of the day', 'Spelling Game'],
+    stacks: ['html5', 'css3', 'tailwind', 'js', 'vue', 'nuxt'],
+    images: [dictionary1, dictionary2, dictionary3, dictionary4],
+    git_url: 'https://github.com/nadlambino/nuxt-dictionary',
+    live_url: 'https://dictionary-nadlambino.netlify.app'
+  },
+  {
+    name: 'Tic Tac Toe',
+    description: 'An online Tic Tac Toe game where two players can play against each other.',
+    stacks: ['html5', 'css3', 'sass', 'tailwind', 'js', 'react', 'socket.io'],
+    images: [tictactoe1, tictactoe2, tictactoe3, tictactoe4, tictactoe5],
+    git_url: 'https://github.com/nadlambino/tictactoe-react',
+    live_url: 'https://tictactoe-nadlambino.netlify.app'
+  },
+  {
     name: 'Image to ASCII',
     description: 'An image processing application that converts images into ASCII characters.',
     features: ['Create an ASCII version of an image', 'Download the generated ASCII image'],
@@ -71,13 +71,5 @@ export default [
     images: [ascii1, ascii2, ascii3],
     git_url: 'https://github.com/nadlambino/vue-image-to-ascii',
     live_url: 'https://imagetoascii-nadlambino.netlify.app'
-  },
-  {
-    name: 'Appointment Booking App',
-    description: 'An appointment booking application.',
-    stacks: ['html5', 'css3', 'vue', 'js', 'php', 'laravel', 'mysql'],
-    images: [],
-    git_url: 'https://github.com/nadlambino/appointment-booking',
-    live_url: ''
   }
 ]

@@ -1,8 +1,8 @@
 <script setup>
 import AppMenu from './components/AppMenu.vue'
-import env from './env'
+import sectionsList from './fixtures/sections'
 
-const sections = env.sections.filter((section) => section.active === true)
+const sections = sectionsList.filter((section) => section.active === true)
 
 const getClass = (i) => {
   const order = i + 1

@@ -1,85 +1,81 @@
 <script setup>
-import env from './../env'
+import sectionsList from './../fixtures/sections'
 
-const sections = env.sections.filter(section => section.active === true);
-
+const sections = sectionsList.filter((section) => section.active === true)
 </script>
 
 <template>
-    <nav class="navbar" ref="navElement">
-        <ul>
-            <li v-for="(section, i) in sections" :key="i" class="link-list">
-                <a :href="`#${section.id}`">{{ section.name }}</a>
-            </li>
-            <li class="cv-list-item">
-                <a href="/CV062023.pdf" target="_blank" class="btn-link">Open CV</a>
-            </li>
-        </ul>
-    </nav>
+  <nav class="navbar" ref="navElement">
+    <ul>
+      <li v-for="(section, i) in sections" :key="i" class="link-list">
+        <a :href="`#${section.id}`">{{ section.name }}</a>
+      </li>
+      <li class="cv-list-item">
+        <a href="/CV062023.pdf" target="_blank" class="btn-link">Open CV</a>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 <style scoped lang="scss">
 .navbar {
-    @apply py-4 top-0 transition-all ease-in-out;
+  @apply py-4 top-0 transition-all ease-in-out;
 
-    ul {
-        @apply flex gap-5 justify-center text-base font-normal;
+  ul {
+    @apply flex gap-5 justify-center text-base font-normal;
 
-        @apply lg:gap-10 lg:text-xl;
+    @apply lg:gap-10 lg:text-xl;
 
-        li.link-list {
-            @apply relative;
+    li.link-list {
+      @apply relative;
 
-            &:first-child {
-                @apply text-light-accent;
+      &:first-child {
+        @apply text-light-accent;
 
-                @apply dark:text-dark-accent;
-            }
+        @apply dark:text-dark-accent;
+      }
 
-            &::after {
-                @apply content-[''] absolute w-0 h-1 left-0 bottom-0 bg-light-accent transition-all ease-in-out;
+      &::after {
+        @apply content-[''] absolute w-0 h-1 left-0 bottom-0 bg-light-accent transition-all ease-in-out;
 
-                @apply dark:bg-dark-accent;
-            }
+        @apply dark:bg-dark-accent;
+      }
 
-
-
-            &:hover {
-                &::after {
-                    @apply w-full;
-                }
-            }
+      &:hover {
+        &::after {
+          @apply w-full;
         }
+      }
     }
+  }
 }
 
 .body-navbar {
-    @apply mt-5;
+  @apply mt-5;
 
-    @apply lg:mt-10;
+  @apply lg:mt-10;
 
-    ul {
-        @apply flex-wrap;
-    }
+  ul {
+    @apply flex-wrap;
+  }
 
-    .cv-list-item {
-        @apply relative z-10;
-    }
+  .cv-list-item {
+    @apply relative z-10;
+  }
 }
 
 .top-navbar {
-    @apply hidden fixed -top-24 transition-all ease-in-out
+  @apply hidden fixed -top-24 transition-all ease-in-out
     justify-center items-center h-[60px] text-sm gap-2;
 }
 
 .fixed-nav {
-    @apply flex top-0 z-30;
+  @apply flex top-0 z-30;
 
-    .cv-list-item {
-        @apply hidden;
+  .cv-list-item {
+    @apply hidden;
 
-        @apply lg:block;
-    }
+    @apply lg:block;
+  }
 }
-
 </style>
