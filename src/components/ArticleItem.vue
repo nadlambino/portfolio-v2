@@ -15,9 +15,10 @@ const { article } = toRefs(props)
     <div class="article">
       <img :src="article.social_image" :alt="article.title" />
       <div class="details-container">
-        <a :href="article.url" class="article-title">{{ article.title }}</a>
+        <a :href="article.url" target="_blank" class="article-title">{{ article.title }}</a>
         <p class="description">
-          {{ article.description }} &nbsp; <a :href="article.url" class="read-more">read more</a>
+          {{ article.description }} &nbsp;
+          <a :href="article.url" target="_blank" class="read-more">read more</a>
         </p>
         <div class="metadata">
           <small>
