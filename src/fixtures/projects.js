@@ -36,10 +36,12 @@ export default [
       'js',
       'typescript',
       'react',
+      'redux',
       'nodejs',
       'express',
       'mongoose',
-      'jwt'
+      'jwt',
+      'docker'
     ],
     image: snapify1,
     images: [snapify1, snapify2, snapify3, snapify4, snapify5, snapify6],
@@ -56,8 +58,8 @@ export default [
     live_url: 'https://dictionary-nadlambino.netlify.app'
   },
   {
-    name: 'Tic Tac Toe',
-    description: 'An online Tic Tac Toe game where two players can play against each other.',
+    name: 'Online TicTacToe',
+    description: 'An online TicTacToe game where two players can play against each other.',
     stacks: ['html5', 'css3', 'sass', 'tailwind', 'js', 'react', 'socket.io'],
     images: [tictactoe1, tictactoe2, tictactoe3, tictactoe4, tictactoe5],
     git_url: 'https://github.com/nadlambino/tictactoe-react',
