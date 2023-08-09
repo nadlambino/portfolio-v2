@@ -17,7 +17,7 @@ const { article } = toRefs(props)
       <div class="details-container">
         <a :href="article.url" target="_blank" class="article-title">{{ article.title }}</a>
         <p class="description">
-          {{ article.description }} &nbsp;
+          {{ article.description }}
           <a :href="article.url" target="_blank" class="read-more">read more</a>
         </p>
         <div class="metadata">
