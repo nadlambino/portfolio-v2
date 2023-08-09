@@ -4,6 +4,7 @@ import CareerHistory from './../components/CareerHistory.vue'
 import SkillsSection from './../components/SkillsSection.vue'
 import ProjectsSection from './../components/ProjectsSection.vue'
 import ArticlesList from './../components/ArticlesList.vue'
+import CertificatesSection from './../components/CertificatesSection.vue'
 
 export default [
   {
@@ -41,5 +42,11 @@ export default [
     active: true,
     id: 'articles',
     name: 'Articles'
+  },
+  {
+    component: CertificatesSection,
+    active: false,
+    id: 'certificates',
+    name: 'Certificates'
   }
 ]
