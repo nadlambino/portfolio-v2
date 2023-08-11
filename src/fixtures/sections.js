@@ -45,7 +45,7 @@ export default [
   },
   {
     component: CertificatesSection,
-    active: false,
+    active: true,
     id: 'certificates',
     name: 'Certificates'
   }
