@@ -66,7 +66,7 @@ onMounted(() => {
         >
       </div>
     </div>
-    <AppNavbar class="top-navbar" :class="!isVisible ? 'fixed-nav' : ''" />
+    <AppNavbar class="top-navbar" :class="!isVisible ? 'fixed-nav' : ''" :is-top="true" />
     <AppNavbar ref="navElement" class="body-navbar" />
   </div>
 </template>

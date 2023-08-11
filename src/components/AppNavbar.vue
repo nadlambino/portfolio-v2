@@ -1,14 +1,31 @@
 <script setup>
 import sectionsList from './../fixtures/sections'
+import { addIcons } from 'oh-vue-icons'
+import { LaHomeSolid, LaCodeSolid, LaCertificateSolid } from 'oh-vue-icons/icons/la'
+import { MdWebSharp, MdWebassetSharp } from 'oh-vue-icons/icons/md'
+
+addIcons(LaHomeSolid, LaCodeSolid, MdWebSharp, LaCertificateSolid, MdWebassetSharp)
 
 const sections = sectionsList.filter((section) => section.active === true)
+const props = defineProps({
+  isTop: {
+    type: Boolean,
+    default: false
+  }
+})
 </script>
 
 <template>
   <nav class="navbar" ref="navElement">
-    <ul>
+    <ul :class="{ top: isTop }">
       <li v-for="(section, i) in sections" :key="i" class="link-list">
-        <a :href="`#${section.id}`">{{ section.name }}</a>
+        <a :href="`#${section.id}`" class="menu-link">
+          <span v-if="!props.isTop">{{ section.name }}</span>
+          <div v-else class="icon-container">
+            <v-icon :name="section.icon" class="icon" />
+            <span>{{ section.name }}</span>
+          </div>
+        </a>
       </li>
       <li class="cv-list-item">
         <a href="/CV062023.pdf" target="_blank" class="btn-link">Open CV</a>
@@ -22,30 +39,32 @@ const sections = sectionsList.filter((section) => section.active === true)
   @apply py-4 top-0 transition-all ease-in-out;
 
   ul {
-    @apply flex gap-5 justify-center text-base font-normal;
+    @apply flex gap-5 justify-center items-center text-base font-normal;
 
     @apply lg:gap-10 lg:text-xl;
 
     li.link-list {
       @apply relative;
+    }
 
-      &:first-child {
-        @apply text-light-accent;
+    &.top {
+      @apply gap-8;
+    }
+  }
+}
 
-        @apply dark:text-dark-accent;
-      }
+.menu-link {
+  @apply flex justify-center items-center;
 
-      &::after {
-        @apply content-[''] absolute w-0 h-1 left-0 bottom-0 bg-light-accent transition-all ease-in-out;
+  .icon {
+    @apply w-6 h-6;
+  }
 
-        @apply dark:bg-dark-accent;
-      }
+  .icon-container {
+    @apply flex flex-col items-center justify-center;
 
-      &:hover {
-        &::after {
-          @apply w-full;
-        }
-      }
+    span {
+      @apply hidden lg:block text-sm;
     }
   }
 }

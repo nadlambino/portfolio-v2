@@ -11,7 +11,8 @@ export default [
     component: GreetSection,
     active: true,
     id: 'home',
-    name: 'Home'
+    name: 'Home',
+    icon: 'la-home-solid'
   },
   {
     component: AboutMe,
@@ -29,24 +30,28 @@ export default [
     component: SkillsSection,
     active: true,
     id: 'skills',
-    name: 'Skills'
+    name: 'Skills',
+    icon: 'la-code-solid'
   },
   {
     component: ProjectsSection,
     active: true,
     id: 'projects',
-    name: 'Projects'
+    name: 'Projects',
+    icon: 'md-webasset-sharp'
   },
   {
     component: ArticlesList,
     active: true,
     id: 'articles',
-    name: 'Articles'
+    name: 'Articles',
+    icon: 'md-article-outlined'
   },
   {
     component: CertificatesSection,
     active: true,
     id: 'certificates',
-    name: 'Certificates'
+    name: 'Certificates',
+    icon: 'la-certificate-solid'
   }
 ]
