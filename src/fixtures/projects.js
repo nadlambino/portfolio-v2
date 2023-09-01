@@ -50,7 +50,7 @@ export default [
   },
   {
     name: 'Dictionary App',
-    description: 'An dictionary app with phonetics and audio.',
+    description: 'A dictionary app with phonetics and audio.',
     features: ['Word of the day', 'Spelling Game'],
     stacks: ['html5', 'css3', 'tailwind', 'js', 'vue', 'nuxt'],
     images: [dictionary1, dictionary2, dictionary3, dictionary4],
