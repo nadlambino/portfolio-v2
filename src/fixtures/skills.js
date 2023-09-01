@@ -5,7 +5,7 @@ export const frontend = [
     icon: 'vi-file-type-html',
     label: 'html5',
     color: '',
-    start: '2016',
+    start: '2018',
     end: '',
     fixed_time: ''
   },
@@ -13,7 +13,7 @@ export const frontend = [
     icon: 'vi-file-type-css',
     label: 'css3',
     color: '',
-    start: '2016',
+    start: '2018',
     end: '',
     fixed_time: ''
   },
@@ -45,7 +45,7 @@ export const frontend = [
     icon: 'vi-file-type-js-official',
     label: 'javascript',
     color: '',
-    start: '2016',
+    start: '2018',
     end: '',
     fixed_time: ''
   },
@@ -53,7 +53,7 @@ export const frontend = [
     icon: 'co-jquery',
     label: 'jquery',
     color: '#0469a4',
-    start: '2017',
+    start: '2018',
     end: '',
     fixed_time: ''
   },
@@ -61,9 +61,9 @@ export const frontend = [
     icon: 'vi-file-type-typescript-official',
     label: 'typescript',
     color: '',
-    start: '2023',
+    start: '',
     end: '',
-    fixed_time: ''
+    fixed_time: '6 months'
   },
   {
     icon: 'vi-file-type-vue',
@@ -105,7 +105,7 @@ export const backend = [
     icon: 'vi-file-type-php3',
     label: 'php',
     color: '',
-    start: '2017',
+    start: '2018',
     end: '',
     fixed_time: ''
   },
@@ -121,25 +121,25 @@ export const backend = [
     icon: 'io-logo-nodejs',
     label: 'nodejs',
     color: '#68a063',
-    start: '2023',
+    start: '',
     end: '',
-    fixed_time: ''
+    fixed_time: '6 months'
   },
   {
     icon: 'si-express',
     label: 'expressjs',
     color: '',
-    start: '2023',
+    start: '',
     end: '',
-    fixed_time: ''
+    fixed_time: '6 months'
   },
   {
     icon: 'co-socket-io',
     label: 'socket.io',
     color: '',
-    start: '2023',
+    start: '',
     end: '',
-    fixed_time: ''
+    fixed_time: '6 months'
   }
 ]
 
@@ -148,7 +148,7 @@ export const database = [
     icon: 'vi-file-type-mysql',
     label: 'mysql',
     color: '',
-    start: '2017',
+    start: '2018',
     end: '',
     fixed_time: ''
   },
@@ -164,9 +164,9 @@ export const database = [
     icon: 'vi-file-type-mongo',
     label: 'mongo db',
     color: '',
-    start: '2023',
+    start: '',
     end: '',
-    fixed_time: ''
+    fixed_time: '6 months'
   }
 ]
 
@@ -199,15 +199,15 @@ export const tools = [
     icon: 'co-webpack',
     label: 'webpack',
     color: '#8bd0f0',
-    start: '2019',
+    start: '',
     end: '',
-    fixed_time: ''
+    fixed_time: '3 years'
   },
   {
     icon: 'si-xampp',
     label: 'xampp',
     color: '#fb7a24',
-    start: '2017',
+    start: '2018',
     end: '',
     fixed_time: ''
   },
