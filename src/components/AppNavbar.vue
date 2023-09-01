@@ -2,9 +2,9 @@
 import sectionsList from './../fixtures/sections'
 import { addIcons } from 'oh-vue-icons'
 import { LaHomeSolid, LaCodeSolid, LaCertificateSolid } from 'oh-vue-icons/icons/la'
-import { MdWebSharp, MdWebassetSharp } from 'oh-vue-icons/icons/md'
+import { MdWebassetSharp, MdArticleOutlined } from 'oh-vue-icons/icons/md'
 
-addIcons(LaHomeSolid, LaCodeSolid, MdWebSharp, LaCertificateSolid, MdWebassetSharp)
+addIcons(LaHomeSolid, LaCodeSolid, MdArticleOutlined, LaCertificateSolid, MdWebassetSharp)
 
 const sections = sectionsList.filter((section) => section.active === true)
 const props = defineProps({
