@@ -16,6 +16,7 @@ import dictionary4 from './../assets/images/dictionary/dictionary4.png'
 import ascii1 from './../assets/images/ascii/ascii1.png'
 import ascii2 from './../assets/images/ascii/ascii2.png'
 import ascii3 from './../assets/images/ascii/ascii3.png'
+import phpmvc1 from './../assets/images/phpmvc/homepage.png'
 
 export default [
   {
@@ -73,5 +74,14 @@ export default [
     images: [ascii1, ascii2, ascii3],
     git_url: 'https://github.com/nadlambino/vue-image-to-ascii',
     live_url: 'https://imagetoascii-nadlambino.netlify.app'
+  },
+  {
+    name: 'Inspire: MVC Framework',
+    description: 'A Laravel-inspired framework. The sole purpose of this project is for me to understand how Laravel works under the hood, deepens my knowledge with PHP, and follow PSR convention.',
+    features: ['Routing', 'View', 'Service Container', 'Collection'],
+    stacks: ['php 8', 'docker', 'apache', 'psr'],
+    images: [phpmvc1],
+    git_url: 'https://github.com/nadlambino/php-mvc-core',
+    live_url: ''
   }
 ]
