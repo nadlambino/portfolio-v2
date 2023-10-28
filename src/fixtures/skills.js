@@ -5,7 +5,7 @@ export const frontend = [
     icon: 'vi-file-type-html',
     label: 'html5',
     color: '',
-    start: '2018',
+    start: '2019',
     end: '',
     fixed_time: ''
   },
@@ -13,7 +13,7 @@ export const frontend = [
     icon: 'vi-file-type-css',
     label: 'css3',
     color: '',
-    start: '2018',
+    start: '2019',
     end: '',
     fixed_time: ''
   },
@@ -45,7 +45,7 @@ export const frontend = [
     icon: 'vi-file-type-js-official',
     label: 'javascript',
     color: '',
-    start: '2018',
+    start: '2019',
     end: '',
     fixed_time: ''
   },
@@ -53,7 +53,7 @@ export const frontend = [
     icon: 'co-jquery',
     label: 'jquery',
     color: '#0469a4',
-    start: '2018',
+    start: '2019',
     end: '',
     fixed_time: ''
   },
@@ -105,7 +105,7 @@ export const backend = [
     icon: 'vi-file-type-php3',
     label: 'php',
     color: '',
-    start: '2018',
+    start: '2019',
     end: '',
     fixed_time: ''
   },
@@ -148,7 +148,7 @@ export const database = [
     icon: 'vi-file-type-mysql',
     label: 'mysql',
     color: '',
-    start: '2018',
+    start: '2019',
     end: '',
     fixed_time: ''
   },
@@ -158,7 +158,7 @@ export const database = [
     color: '#D82C20',
     start: '',
     end: '',
-    fixed_time: '1 year'
+    fixed_time: '2 years'
   },
   {
     icon: 'vi-file-type-mongo',
@@ -207,7 +207,7 @@ export const tools = [
     icon: 'si-xampp',
     label: 'xampp',
     color: '#fb7a24',
-    start: '2018',
+    start: '2019',
     end: '',
     fixed_time: ''
   },
