@@ -20,6 +20,15 @@ import phpmvc1 from './../assets/images/phpmvc/homepage.png'
 
 export default [
   {
+    name: 'Inspire: MVC Framework',
+    description: 'A Laravel-inspired framework. The sole purpose of this project is for me to understand how Laravel works under the hood, deepens my knowledge with PHP, and follow PSR convention.',
+    features: ['Routing', 'View', 'Service Container', 'Collection'],
+    stacks: ['php 8', 'docker', 'apache', 'psr'],
+    images: [phpmvc1],
+    git_url: 'https://github.com/nadlambino/php-mvc-core',
+    live_url: ''
+  },
+  {
     name: 'Snapify',
     description:
       'A simple social media app that allows user to upload images or videos, like, and comment to a post.',
@@ -74,14 +83,5 @@ export default [
     images: [ascii1, ascii2, ascii3],
     git_url: 'https://github.com/nadlambino/vue-image-to-ascii',
     live_url: 'https://imagetoascii-nadlambino.netlify.app'
-  },
-  {
-    name: 'Inspire: MVC Framework',
-    description: 'A Laravel-inspired framework. The sole purpose of this project is for me to understand how Laravel works under the hood, deepens my knowledge with PHP, and follow PSR convention.',
-    features: ['Routing', 'View', 'Service Container', 'Collection'],
-    stacks: ['php 8', 'docker', 'apache', 'psr'],
-    images: [phpmvc1],
-    git_url: 'https://github.com/nadlambino/php-mvc-core',
-    live_url: ''
   }
 ]
