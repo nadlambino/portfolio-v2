@@ -20,12 +20,12 @@ import phpmvc1 from './../assets/images/phpmvc/homepage.png'
 
 export default [
   {
-    name: 'Inspire: MVC Framework',
+    name: 'Inspira: MVC Framework',
     description: 'A Laravel-inspired framework. The sole purpose of this project is for me to understand how Laravel works under the hood, deepens my knowledge with PHP, and follow PSR convention.',
     features: ['Routing', 'View', 'Service Container', 'Collection'],
     stacks: ['php 8', 'docker', 'apache', 'psr'],
     images: [phpmvc1],
-    git_url: 'https://github.com/nadlambino/php-mvc-core',
+    git_url: 'https://github.com/nadlambino/inspira-framework',
     live_url: ''
   },
   {
