@@ -28,7 +28,7 @@ const props = defineProps({
         </a>
       </li>
       <li class="cv-list-item">
-        <a href="/CV062023.pdf" target="_blank" class="btn-link">Open CV</a>
+        <a href="/RONALD-LAMBINO-CV052024.pdf" target="_blank" class="btn-link">Open CV</a>
       </li>
     </ul>
   </nav>
