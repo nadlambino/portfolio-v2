@@ -30,6 +30,14 @@ import kanban from './../assets/images/sprintly/kanban.png'
 import task from './../assets/images/sprintly/task.png'
 import subtask from './../assets/images/sprintly/subtask.png'
 import dashboard from './../assets/images/sprintly/dashboard.png'
+import uploadable1 from './../assets/images/uploadable/1.png'
+import uploadable2 from './../assets/images/uploadable/2.png'
+import uploadable3 from './../assets/images/uploadable/3.png'
+import uploadable4 from './../assets/images/uploadable/4.png'
+import uploadable5 from './../assets/images/uploadable/5.png'
+import uploadable6 from './../assets/images/uploadable/6.png'
+import uploadable7 from './../assets/images/uploadable/7.png'
+import uploadable8 from './../assets/images/uploadable/8.png'
 
 export default [
   {
@@ -40,6 +48,27 @@ export default [
     images: [phpmvc1, phpmvc2, phpmvc3, phpmvc4, phpmvc5, phpmvc6],
     git_url: 'https://github.com/nadlambino/inspira-framework',
     live_url: ''
+  },
+  {
+    name: 'Laravel Uploadable',
+    description: 'An open source laravel package that automagically handles the file uploads for your uploadable models.',
+    features: [
+      'Automatically handle single or multiple file uploads for your uploadable models',
+      'Create a database entry for each file uploaded in uploads table containing all the necessary information about the file and the model it is attached to',
+      'Customize the file name and path location of the uploaded files',
+      'With built in validation rules for different types like images, videos, and documents',
+      'Ability to customize the validation rules or completely disable them if you already have your own validation rules in your form request',
+      'Ability to manually handle the file upload if needed',
+      'Ability to temporarily disable the file upload if needed',
+      'Ability to either add the new uploads to and existing uploads or replace the existing uploads with the new ones when updating the uploadable model',
+      'With built in relationship methods for your model to easily query the uploaded files attached to them',
+      'Ability to run a callback function when a new file is uploaded',
+      'Ability to put the file upload process into a queue and run it in the background'
+    ],
+    stacks: ['php', 'laravel'],
+    images: [uploadable1, uploadable2, uploadable3, uploadable4, uploadable5, uploadable6, uploadable7, uploadable8],
+    git_url: 'https://github.com/nadlambino/laravel-uploadable',
+    live_url: 'https://packagist.org/packages/nadlambino/uploadable'
   },
   {
     name: 'Sprintly',
