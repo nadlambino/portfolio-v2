@@ -22,6 +22,14 @@ import phpmvc3 from './../assets/images/phpmvc/commands.png'
 import phpmvc4 from './../assets/images/phpmvc/registry.png'
 import phpmvc5 from './../assets/images/phpmvc/provider.png'
 import phpmvc6 from './../assets/images/phpmvc/view.png'
+import landing from './../assets/images/sprintly/landing.png'
+import registration from './../assets/images/sprintly/registration.png'
+import login from './../assets/images/sprintly/login.png'
+import status from './../assets/images/sprintly/status.png'
+import kanban from './../assets/images/sprintly/kanban.png'
+import task from './../assets/images/sprintly/task.png'
+import subtask from './../assets/images/sprintly/subtask.png'
+import dashboard from './../assets/images/sprintly/dashboard.png'
 
 export default [
   {
@@ -31,6 +39,26 @@ export default [
     stacks: ['php 8', 'docker', 'apache', 'psr'],
     images: [phpmvc1, phpmvc2, phpmvc3, phpmvc4, phpmvc5, phpmvc6],
     git_url: 'https://github.com/nadlambino/inspira-framework',
+    live_url: ''
+  },
+  {
+    name: 'Sprintly',
+    description: 'A simple task management app built with simplicity in mind.',
+    features: [
+      'Sign up or sign in to an existing account', 
+      'Create, edit, delete statuses',
+      'Drag and drop status to sort it', 
+      'Create, edit, and delete priority levels', 
+      'Create, edit, delete, and manage tasks', 
+      'Ability to create a task with images',
+      'Ability to group tasks by creating a parent task', 
+      'On kanban display, drag and drop task to move it to its new status',
+      'On table display, move task to its new status forward or backward according to the ordering of the status',
+      'Update user information in the profile section'
+    ],
+    stacks: ['html5', 'css3', 'tailwind', 'js', 'vue', 'inertia.js', 'php', 'laravel', 'mysql'],
+    images: [landing, registration, login, status, kanban, task, subtask, dashboard],
+    git_url: 'https://github.com/nadlambino/sprintly',
     live_url: ''
   },
   {
