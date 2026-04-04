@@ -1,0 +1,41 @@
+name: Deploy to DigitalOcean
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js (if needed)
+        if: exists('package.json')
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        if: exists('package.json')
+        run: npm ci
+
+      - name: Build project
+        if: exists('package.json')
+        run: npm run build
+
+      - name: Deploy via SSH to Droplet
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.DO_HOST }}
+          username: ${{ secrets.DO_USER }}
+          key: ${{ secrets.DO_SSH_KEY }}
+          script: |
+            cd /var/www/portfolio
+            git pull origin main
+            if [ -f package.json ]; then
+              npm ci --only=production
+              npm run build
+            fi
+            sudo systemctl reload nginx
