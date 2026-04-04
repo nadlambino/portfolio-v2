@@ -8,35 +8,22 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
-        run: npm run build
-
-      - name: Copy build to droplet
-        uses: appleboy/scp-action@v0
-        with:
-          host: ${{ secrets.DO_HOST }}
-          username: ${{ secrets.DO_USER }}
-          key: ${{ secrets.DO_SSH_KEY }}
-          source: "dist"
-          target: "/tmp/portfolio-dist"
-
-      - name: Deploy to container
+      - name: Deploy via SSH
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.DO_HOST }}
           username: ${{ secrets.DO_USER }}
           key: ${{ secrets.DO_SSH_KEY }}
           script: |
-            docker cp /tmp/portfolio-dist portfolio:/usr/share/nginx/html
+            set -e
+            export GIT_SSH_COMMAND="ssh -i /root/.ssh/do_deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=no"
+            cd /tmp
+            rm -rf portfolio-build
+            git clone git@github.com:nadlambino/portfolio-v2.git portfolio-build
+            cd portfolio-build
+            git fetch origin master
+            git reset --hard origin/master
+            npm ci
+            npm run build
+            docker cp dist/. portfolio:/usr/share/nginx/html
             docker exec portfolio nginx -s reload
