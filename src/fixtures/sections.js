@@ -5,7 +5,6 @@ import SkillsSection from './../components/SkillsSection.vue'
 import ProjectsSection from './../components/ProjectsSection.vue'
 import ArticlesList from './../components/ArticlesList.vue'
 import CertificatesSection from './../components/CertificatesSection.vue'
-import FooterSection from './../components/FooterSection.vue'
 
 export default [
   {
@@ -54,12 +53,5 @@ export default [
     id: 'certificates',
     name: 'Certificates',
     icon: 'la-certificate-solid'
-  },
-  {
-    component: FooterSection,
-    active: true,
-    id: 'footer',
-    name: 'Contact',
-    icon: 'la-envelope-solid'
   }
 ]
