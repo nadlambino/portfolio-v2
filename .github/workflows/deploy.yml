@@ -11,13 +11,32 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Deploy via SSH to Droplet
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Copy build to droplet
+        uses: appleboy/scp-action@v0
+        with:
+          host: ${{ secrets.DO_HOST }}
+          username: ${{ secrets.DO_USER }}
+          key: ${{ secrets.DO_SSH_KEY }}
+          source: "dist"
+          target: "/tmp/portfolio-dist"
+
+      - name: Deploy to container
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.DO_HOST }}
           username: ${{ secrets.DO_USER }}
           key: ${{ secrets.DO_SSH_KEY }}
           script: |
-            cd /var/www/portfolio
-            git pull origin master
-            sudo systemctl reload nginx
+            docker cp /tmp/portfolio-dist portfolio:/usr/share/nginx/html
+            docker exec portfolio nginx -s reload
