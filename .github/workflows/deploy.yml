@@ -33,7 +33,7 @@ jobs:
           key: ${{ secrets.DO_SSH_KEY }}
           script: |
             cd /var/www/portfolio
-            git pull origin main
+            git pull origin master
             if [ -f package.json ]; then
               npm ci --only=production
               npm run build
