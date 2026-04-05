@@ -24,31 +24,4 @@ jobs:
             docker rm portfolio || true
             docker run -d -p 80:80 --name portfolio portfolio-v2
 
-      - name: Notify Telegram
-        if: success()
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: |
-            ✅ Portfolio deployed successfully!
-            
-            Repository: nadlambino/portfolio-v2
-            Branch: master
-            Commit: ${{ github.event.head_commit.message }}
-            
-            Live at: https://www.nadlambino.com
 
-      - name: Notify on Failure
-        if: failure()
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: |
-            ❌ Portfolio deployment failed!
-            
-            Repository: nadlambino/portfolio-v2
-            Branch: master
-            
-            Check GitHub Actions for details.
