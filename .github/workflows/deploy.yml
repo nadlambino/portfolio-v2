@@ -1,4 +1,4 @@
-name: Deploy to DigitalOcean
+name: Deploy to Home Server
 
 on:
   push:
@@ -11,19 +11,44 @@ jobs:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1
         with:
-          host: ${{ secrets.DO_HOST }}
-          username: ${{ secrets.DO_USER }}
-          key: ${{ secrets.DO_SSH_KEY }}
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
           script: |
             set -e
-            export GIT_SSH_COMMAND="ssh -i /root/.ssh/do_deploy_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=no"
-            cd /tmp
-            rm -rf portfolio-build
-            git clone git@github.com:nadlambino/portfolio-v2.git portfolio-build
-            cd portfolio-build
-            git fetch origin master
-            git reset --hard origin/master
-            npm ci
-            npm run build
-            docker cp dist/. portfolio:/usr/share/nginx/html
-            docker exec portfolio nginx -s reload
+            cd /home/nadlambino/.openclaw/workspace/nadlambino/portfolio-v2
+            git pull origin master
+            docker build -t portfolio-v2 .
+            docker stop portfolio || true
+            docker rm portfolio || true
+            docker run -d -p 80:80 --name portfolio portfolio-v2
+
+      - name: Notify Telegram
+        if: success()
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: |
+            ✅ Portfolio deployed successfully!
+            
+            Repository: nadlambino/portfolio-v2
+            Branch: master
+            Commit: ${{ github.event.head_commit.message }}
+            
+            Live at: https://www.nadlambino.com
+
+      - name: Notify on Failure
+        if: failure()
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: |
+            ❌ Portfolio deployment failed!
+            
+            Repository: nadlambino/portfolio-v2
+            Branch: master
+            
+            Check GitHub Actions for details.
