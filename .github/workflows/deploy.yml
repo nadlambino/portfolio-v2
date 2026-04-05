@@ -1,4 +1,4 @@
-name: Deploy to Home Server
+name: Deploy via Webhook
 
 on:
   push:
@@ -8,20 +8,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22
-          script: |
-            set -e
-            cd /home/nadlambino/.openclaw/workspace/nadlambino/portfolio-v2
-            git pull origin master
-            docker build -t portfolio-v2 .
-            docker stop portfolio || true
-            docker rm portfolio || true
-            docker run -d -p 80:80 --name portfolio portfolio-v2
-
-
+      - name: Trigger deployment
+        run: |
+          curl -X POST https://deploy.nadlambino.com \
+            -H "Content-Type: application/json" \
+            -H "X-Hub-Signature-256: sha256=$(echo -n '${{ toJSON(github.event) }}' | openssl dgst -sha256 -hmac '${{ secrets.WEBHOOK_SECRET }}' | awk '{print $2}')" \
+            -d '${{ toJSON(github.event) }}'
