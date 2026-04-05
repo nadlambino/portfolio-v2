@@ -46,15 +46,11 @@ onMounted(() => {
     <Particles :key="mode" id="tsparticles" :particlesInit="particlesInit" :options="parts" />
     <div class="container">
       <div class="greet-content">
-        <h3 class="greet-text">
-          Hi there,
-          <v-icon class="wave" name="md-wavinghand-outlined" />
-        </h3>
-        <h1 class="intro-text">I am <span class="name">Ronald Lambino</span></h1>
-        <h2 class="desc-text">a passionate web developer</h2>
+        <h1 class="intro-text"><span class="name">Ronald Lambino</span></h1>
+        <h2 class="desc-text">Full-Stack Developer · Laravel & Vue Specialist</h2>
         <h1 class="short-desc">
-          Experienced Web Developer with passion for creating attractive and interactive websites
-          meeting customer needs and exceeding expectations.
+          I build scalable web applications and clean APIs. From backend architecture to
+          pixel-perfect frontends — focused on performance, maintainability, and user experience.
         </h1>
       </div>
       <div class="image-container">
