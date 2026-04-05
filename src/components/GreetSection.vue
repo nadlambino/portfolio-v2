@@ -47,10 +47,11 @@ onMounted(() => {
     <div class="container">
       <div class="greet-content">
         <h1 class="intro-text"><span class="name">Ronald Lambino</span></h1>
-        <h2 class="desc-text">Full-Stack Developer · Laravel & Vue Specialist</h2>
+        <h2 class="desc-text">Full-Stack Developer · Laravel, Vue & AWS</h2>
         <h1 class="short-desc">
-          I build scalable web applications and clean APIs. From backend architecture to
-          pixel-perfect frontends — focused on performance, maintainability, and user experience.
+          I build scalable web applications, clean APIs, and cloud-native solutions. From backend
+          architecture to pixel-perfect frontends — focused on performance, maintainability, and
+          user experience.
         </h1>
       </div>
       <div class="image-container">
