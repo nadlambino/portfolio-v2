@@ -17,7 +17,7 @@ const navElement = ref(null)
 const { isVisible } = useObserver(navElement, true, '.body-navbar', {
   rootMargin: '-60px 0px 0px 0px'
 })
-const mode = useStorage('mode', 'light')
+const mode = ref('light')
 const parts = reactive(particles)
 
 watch(
