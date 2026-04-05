@@ -40,8 +40,7 @@ class DeployHandler(http.server.BaseHTTPRequestHandler):
             "cd /home/nadlambino/.openclaw/workspace/nadlambino/portfolio-v2 && "
             "git pull origin master && "
             "sudo docker build -t portfolio-v2 . && "
-            "sudo docker stop portfolio || true && "
-            "sudo docker rm portfolio || true && "
+            "sudo docker rm -f portfolio 2>/dev/null || true && "
             "sudo docker run -d -p 80:80 --name portfolio portfolio-v2"
         ])
 
